@@ -37,12 +37,229 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="xGeometry" id="XKF-6j-SPy">
-                        <barButtonItem key="rightBarButtonItem" title="Sobre" id="NNC-wE-0UJ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Sobre" id="NNC-wE-0UJ">
+                            <connections>
+                                <segue destination="7HG-hY-qgL" kind="push" id="0uF-DD-9RR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="ma2-Zw-Rtg" kind="push" identifier="areaTriangulo" id="Szu-Bj-RQW"/>
+                        <segue destination="h8d-dg-L24" kind="push" identifier="areaQuadrado" id="X6d-ig-ddm"/>
+                        <segue destination="q4N-i7-vef" kind="push" identifier="areaCilindro" id="rZ3-pF-GRY"/>
+                        <segue destination="K01-Zi-lo3" kind="push" identifier="areaCirculo" id="bpq-R5-goX"/>
+                        <segue destination="nRg-nM-B5U" kind="push" identifier="areaCone" id="kMB-Ha-sXE"/>
+                        <segue destination="mCL-hl-maa" kind="push" identifier="volumeCilindro" id="33E-yW-ckn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nc-QQ-OV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="495" y="29"/>
+            <point key="canvasLocation" x="117" y="27"/>
+        </scene>
+        <!--View Controller - Cilindro-->
+        <scene sceneID="dCL-PL-HZs">
+            <objects>
+                <viewController id="mCL-hl-maa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sFh-dt-lib"/>
+                        <viewControllerLayoutGuide type="bottom" id="IRX-aj-1be"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QJ8-yJ-geq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cilindro" id="YQc-k9-Uxa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDv-CV-GKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="385"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hoi-eY-I2b">
+            <objects>
+                <viewController id="UK8-bd-JYp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4FE-Na-sFU"/>
+                        <viewControllerLayoutGuide type="bottom" id="bVf-6L-wFO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4tZ-Pw-yvp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wGD-tl-fU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="385"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kgM-oG-zlz">
+            <objects>
+                <viewController id="wC3-yh-xEq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yrg-H7-6lE"/>
+                        <viewControllerLayoutGuide type="bottom" id="lgu-ST-IYH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JoX-lQ-GVM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aui-jC-9kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382" y="385"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MTX-LO-qHQ">
+            <objects>
+                <viewController id="eFa-ZJ-iB6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wX9-db-0Sf"/>
+                        <viewControllerLayoutGuide type="bottom" id="8wf-Ww-iGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kfm-qK-sLa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnq-y0-AXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="385"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IFu-fh-70u">
+            <objects>
+                <viewController id="JwX-4l-swH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Heb-ud-2tE"/>
+                        <viewControllerLayoutGuide type="bottom" id="hW1-GT-HKy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MqH-ti-Vfu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sRj-U2-yK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2312" y="385"/>
+        </scene>
+        <!--View Controller - Cilindro-->
+        <scene sceneID="u6t-KR-fd3">
+            <objects>
+                <viewController title="Cilindro" id="q4N-i7-vef" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Nt-lU-7vB"/>
+                        <viewControllerLayoutGuide type="bottom" id="PlS-dD-ARB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aPw-AQ-Vqk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cilindro" id="gwI-50-0Sf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMg-lL-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="-647"/>
+        </scene>
+        <!--View Controller - Círculo-->
+        <scene sceneID="4aD-eR-OpI">
+            <objects>
+                <viewController title="Círculo" id="K01-Zi-lo3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QO1-oR-8hw"/>
+                        <viewControllerLayoutGuide type="bottom" id="fr4-CL-MdQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NWg-Ch-7l2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Círculo" id="12h-vA-RL0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="era-uT-IJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="-647"/>
+        </scene>
+        <!--View Controller - Cone-->
+        <scene sceneID="3hG-1Y-Aoj">
+            <objects>
+                <viewController title="Cone" id="nRg-nM-B5U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M5F-yw-zFg"/>
+                        <viewControllerLayoutGuide type="bottom" id="rru-U0-qfr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4pG-hi-BZf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cone" id="GBb-u9-oOg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvR-zB-wvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382" y="-647"/>
+        </scene>
+        <!--Triangulo View Controller - Triângulo-->
+        <scene sceneID="ue6-OU-Xyo">
+            <objects>
+                <viewController id="ma2-Zw-Rtg" customClass="XGMTrianguloViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GWA-jP-w2W"/>
+                        <viewControllerLayoutGuide type="bottom" id="1fy-5M-iRQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fcb-BO-JW3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Triângulo" id="0kZ-rl-gRi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tx6-oA-Rmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1840" y="-647"/>
+        </scene>
+        <!--View Controller - Quadrado-->
+        <scene sceneID="naM-ww-VP7">
+            <objects>
+                <viewController id="h8d-dg-L24" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ApQ-zg-fYn"/>
+                        <viewControllerLayoutGuide type="bottom" id="YYg-mf-rk8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sQj-yt-vSa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quadrado" id="DiC-ny-RdV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWb-ti-uMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2312" y="-647"/>
+        </scene>
+        <!--View Controller - Sobre-->
+        <scene sceneID="QlD-xp-eAo">
+            <objects>
+                <viewController id="7HG-hY-qgL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3ot-M3-NXK"/>
+                        <viewControllerLayoutGuide type="bottom" id="n60-RS-gLh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kZR-oH-m4u">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sobre" id="TMn-5f-UhW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xF-CN-v2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="-647"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bJQ-8o-qI4">
@@ -60,7 +277,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HfI-wc-HCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="29"/>
+            <point key="canvasLocation" x="-295" y="27"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

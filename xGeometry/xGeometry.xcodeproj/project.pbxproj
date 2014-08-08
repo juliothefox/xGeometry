@@ -22,7 +22,8 @@
 		43CF0D82199548AF00ECC2AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D80199548AF00ECC2AC /* InfoPlist.strings */; };
 		43CF0D84199548AF00ECC2AC /* xGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D83199548AF00ECC2AC /* xGeometryTests.m */; };
 		43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D9219955B9100ECC2AC /* XGMPrincipalTableViewController.m */; };
-		43CF0D9619955CB500ECC2AC /* database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D9519955CB500ECC2AC /* database.plist */; };
+		43CF0D9619955CB500ECC2AC /* principalTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D9519955CB500ECC2AC /* principalTableView.plist */; };
+		43CF0DA019956AF000ECC2AC /* XGMTrianguloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D9F19956AF000ECC2AC /* XGMTrianguloViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +57,9 @@
 		43CF0D83199548AF00ECC2AC /* xGeometryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xGeometryTests.m; sourceTree = "<group>"; };
 		43CF0D9119955B9100ECC2AC /* XGMPrincipalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMPrincipalTableViewController.h; sourceTree = "<group>"; };
 		43CF0D9219955B9100ECC2AC /* XGMPrincipalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMPrincipalTableViewController.m; sourceTree = "<group>"; };
-		43CF0D9519955CB500ECC2AC /* database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = database.plist; sourceTree = "<group>"; };
+		43CF0D9519955CB500ECC2AC /* principalTableView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = principalTableView.plist; sourceTree = "<group>"; };
+		43CF0D9E19956AF000ECC2AC /* XGMTrianguloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMTrianguloViewController.h; sourceTree = "<group>"; };
+		43CF0D9F19956AF000ECC2AC /* XGMTrianguloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMTrianguloViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 				43CF0D8D19955AC800ECC2AC /* AppDelegate */,
 				43CF0D8E19955AD100ECC2AC /* Storyboard */,
 				43CF0D9019955B6B00ECC2AC /* PrincipalTableViewController */,
+				43CF0D9D19956ABC00ECC2AC /* TrianguloViewController */,
 				43CF0D70199548AE00ECC2AC /* Images.xcassets */,
 				43CF0D5C199548AE00ECC2AC /* Supporting Files */,
 			);
@@ -185,9 +189,18 @@
 		43CF0D9419955C9300ECC2AC /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				43CF0D9519955CB500ECC2AC /* database.plist */,
+				43CF0D9519955CB500ECC2AC /* principalTableView.plist */,
 			);
 			name = Database;
+			sourceTree = "<group>";
+		};
+		43CF0D9D19956ABC00ECC2AC /* TrianguloViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43CF0D9E19956AF000ECC2AC /* XGMTrianguloViewController.h */,
+				43CF0D9F19956AF000ECC2AC /* XGMTrianguloViewController.m */,
+			);
+			name = TrianguloViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +283,7 @@
 				43CF0D6C199548AE00ECC2AC /* Main_iPad.storyboard in Resources */,
 				43CF0D71199548AE00ECC2AC /* Images.xcassets in Resources */,
 				43CF0D69199548AE00ECC2AC /* Main_iPhone.storyboard in Resources */,
-				43CF0D9619955CB500ECC2AC /* database.plist in Resources */,
+				43CF0D9619955CB500ECC2AC /* principalTableView.plist in Resources */,
 				43CF0D60199548AE00ECC2AC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +306,7 @@
 				43CF0D62199548AE00ECC2AC /* main.m in Sources */,
 				43CF0D66199548AE00ECC2AC /* XGMAppDelegate.m in Sources */,
 				43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */,
+				43CF0DA019956AF000ECC2AC /* XGMTrianguloViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
