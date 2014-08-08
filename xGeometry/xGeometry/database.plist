@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>Cilindro</string>
+		<string>Círculo</string>
+		<string>Cone</string>
+		<string>Triângulo</string>
+		<string>Quadrado</string>
+	</array>
+	<array>
+		<string>Cilindro</string>
+		<string>Cone</string>
+		<string>Cubo</string>
+		<string>Esfera</string>
+		<string>Pirâmide</string>
+	</array>
+</array>
+</plist>

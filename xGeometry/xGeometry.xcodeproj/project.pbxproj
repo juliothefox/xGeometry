@@ -15,13 +15,14 @@
 		43CF0D66199548AE00ECC2AC /* XGMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D65199548AE00ECC2AC /* XGMAppDelegate.m */; };
 		43CF0D69199548AE00ECC2AC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D67199548AE00ECC2AC /* Main_iPhone.storyboard */; };
 		43CF0D6C199548AE00ECC2AC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D6A199548AE00ECC2AC /* Main_iPad.storyboard */; };
-		43CF0D6F199548AE00ECC2AC /* XGMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D6E199548AE00ECC2AC /* XGMViewController.m */; };
 		43CF0D71199548AE00ECC2AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D70199548AE00ECC2AC /* Images.xcassets */; };
 		43CF0D78199548AF00ECC2AC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D77199548AF00ECC2AC /* XCTest.framework */; };
 		43CF0D79199548AF00ECC2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D55199548AE00ECC2AC /* Foundation.framework */; };
 		43CF0D7A199548AF00ECC2AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D59199548AE00ECC2AC /* UIKit.framework */; };
 		43CF0D82199548AF00ECC2AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D80199548AF00ECC2AC /* InfoPlist.strings */; };
 		43CF0D84199548AF00ECC2AC /* xGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D83199548AF00ECC2AC /* xGeometryTests.m */; };
+		43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CF0D9219955B9100ECC2AC /* XGMPrincipalTableViewController.m */; };
+		43CF0D9619955CB500ECC2AC /* database.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43CF0D9519955CB500ECC2AC /* database.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +48,15 @@
 		43CF0D65199548AE00ECC2AC /* XGMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGMAppDelegate.m; sourceTree = "<group>"; };
 		43CF0D68199548AE00ECC2AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		43CF0D6B199548AE00ECC2AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		43CF0D6D199548AE00ECC2AC /* XGMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XGMViewController.h; sourceTree = "<group>"; };
-		43CF0D6E199548AE00ECC2AC /* XGMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XGMViewController.m; sourceTree = "<group>"; };
 		43CF0D70199548AE00ECC2AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43CF0D76199548AF00ECC2AC /* xGeometryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xGeometryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CF0D77199548AF00ECC2AC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		43CF0D7F199548AF00ECC2AC /* xGeometryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xGeometryTests-Info.plist"; sourceTree = "<group>"; };
 		43CF0D81199548AF00ECC2AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43CF0D83199548AF00ECC2AC /* xGeometryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xGeometryTests.m; sourceTree = "<group>"; };
+		43CF0D9119955B9100ECC2AC /* XGMPrincipalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMPrincipalTableViewController.h; sourceTree = "<group>"; };
+		43CF0D9219955B9100ECC2AC /* XGMPrincipalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMPrincipalTableViewController.m; sourceTree = "<group>"; };
+		43CF0D9519955CB500ECC2AC /* database.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = database.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +116,10 @@
 		43CF0D5B199548AE00ECC2AC /* xGeometry */ = {
 			isa = PBXGroup;
 			children = (
-				43CF0D64199548AE00ECC2AC /* XGMAppDelegate.h */,
-				43CF0D65199548AE00ECC2AC /* XGMAppDelegate.m */,
-				43CF0D67199548AE00ECC2AC /* Main_iPhone.storyboard */,
-				43CF0D6A199548AE00ECC2AC /* Main_iPad.storyboard */,
-				43CF0D6D199548AE00ECC2AC /* XGMViewController.h */,
-				43CF0D6E199548AE00ECC2AC /* XGMViewController.m */,
+				43CF0D9419955C9300ECC2AC /* Database */,
+				43CF0D8D19955AC800ECC2AC /* AppDelegate */,
+				43CF0D8E19955AD100ECC2AC /* Storyboard */,
+				43CF0D9019955B6B00ECC2AC /* PrincipalTableViewController */,
 				43CF0D70199548AE00ECC2AC /* Images.xcassets */,
 				43CF0D5C199548AE00ECC2AC /* Supporting Files */,
 			);
@@ -153,6 +153,41 @@
 				43CF0D80199548AF00ECC2AC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43CF0D8D19955AC800ECC2AC /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				43CF0D64199548AE00ECC2AC /* XGMAppDelegate.h */,
+				43CF0D65199548AE00ECC2AC /* XGMAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		43CF0D8E19955AD100ECC2AC /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				43CF0D67199548AE00ECC2AC /* Main_iPhone.storyboard */,
+				43CF0D6A199548AE00ECC2AC /* Main_iPad.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		43CF0D9019955B6B00ECC2AC /* PrincipalTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43CF0D9119955B9100ECC2AC /* XGMPrincipalTableViewController.h */,
+				43CF0D9219955B9100ECC2AC /* XGMPrincipalTableViewController.m */,
+			);
+			name = PrincipalTableViewController;
+			sourceTree = "<group>";
+		};
+		43CF0D9419955C9300ECC2AC /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				43CF0D9519955CB500ECC2AC /* database.plist */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +270,7 @@
 				43CF0D6C199548AE00ECC2AC /* Main_iPad.storyboard in Resources */,
 				43CF0D71199548AE00ECC2AC /* Images.xcassets in Resources */,
 				43CF0D69199548AE00ECC2AC /* Main_iPhone.storyboard in Resources */,
+				43CF0D9619955CB500ECC2AC /* database.plist in Resources */,
 				43CF0D60199548AE00ECC2AC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +292,7 @@
 			files = (
 				43CF0D62199548AE00ECC2AC /* main.m in Sources */,
 				43CF0D66199548AE00ECC2AC /* XGMAppDelegate.m in Sources */,
-				43CF0D6F199548AE00ECC2AC /* XGMViewController.m in Sources */,
+				43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +431,7 @@
 				GCC_PREFIX_HEADER = "xGeometry/xGeometry-Prefix.pch";
 				INFOPLIST_FILE = "xGeometry/xGeometry-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -408,6 +445,7 @@
 				GCC_PREFIX_HEADER = "xGeometry/xGeometry-Prefix.pch";
 				INFOPLIST_FILE = "xGeometry/xGeometry-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
