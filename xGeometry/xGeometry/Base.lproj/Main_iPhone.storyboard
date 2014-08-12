@@ -13,15 +13,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="NNq-sa-yuo" style="IBUITableViewCellStyleDefault" id="F9E-o5-yP9">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="NNq-sa-yuo" style="IBUITableViewCellStyleDefault" id="F9E-o5-yP9">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9E-o5-yP9" id="koI-NF-3gq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NNq-sa-yuo">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -39,208 +39,83 @@
                     <navigationItem key="navigationItem" title="xGeometry" id="XKF-6j-SPy">
                         <barButtonItem key="rightBarButtonItem" title="Sobre" id="NNC-wE-0UJ">
                             <connections>
-                                <segue destination="7HG-hY-qgL" kind="push" id="0uF-DD-9RR"/>
+                                <segue destination="7HG-hY-qgL" kind="push" identifier="sobre" id="K5R-eR-foB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="ma2-Zw-Rtg" kind="push" identifier="areaTriangulo" id="Szu-Bj-RQW"/>
-                        <segue destination="h8d-dg-L24" kind="push" identifier="areaQuadrado" id="X6d-ig-ddm"/>
-                        <segue destination="q4N-i7-vef" kind="push" identifier="areaCilindro" id="rZ3-pF-GRY"/>
-                        <segue destination="K01-Zi-lo3" kind="push" identifier="areaCirculo" id="bpq-R5-goX"/>
-                        <segue destination="nRg-nM-B5U" kind="push" identifier="areaCone" id="kMB-Ha-sXE"/>
-                        <segue destination="mCL-hl-maa" kind="push" identifier="volumeCilindro" id="33E-yW-ckn"/>
+                        <segue destination="U67-63-Qgq" kind="push" identifier="forma" id="pK0-D4-LDV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nc-QQ-OV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117" y="27"/>
         </scene>
-        <!--View Controller - Cilindro-->
-        <scene sceneID="dCL-PL-HZs">
+        <!--Forma Table View Controller - Forma-->
+        <scene sceneID="hpr-uw-ry5">
             <objects>
-                <viewController id="mCL-hl-maa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sFh-dt-lib"/>
-                        <viewControllerLayoutGuide type="bottom" id="IRX-aj-1be"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QJ8-yJ-geq">
+                <tableViewController id="U67-63-Qgq" customClass="XGMFormaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DcI-II-FqL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Cilindro" id="YQc-k9-Uxa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oDv-CV-GKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="x7v-9F-N6V" style="IBUITableViewCellStyleDefault" id="e0U-v0-KgU">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e0U-v0-KgU" id="fzf-46-jY9">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x7v-9F-N6V">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="U67-63-Qgq" id="a4T-H7-68A"/>
+                            <outlet property="delegate" destination="U67-63-Qgq" id="4ph-ID-rof"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Forma" id="VVE-KH-glE">
+                        <barButtonItem key="rightBarButtonItem" title="Explicação" id="CqJ-fJ-eXJ">
+                            <connections>
+                                <segue destination="xxz-oQ-uT9" kind="push" identifier="explicacao" id="4Ql-CO-Jog"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="bVc-PC-SNv" kind="push" identifier="calculo" id="Tig-nD-7I8"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGM-lb-YBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="385"/>
+            <point key="canvasLocation" x="540" y="27"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Hoi-eY-I2b">
+        <scene sceneID="iWs-CR-5w8">
             <objects>
-                <viewController id="UK8-bd-JYp" sceneMemberID="viewController">
+                <viewController id="bVc-PC-SNv" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4FE-Na-sFU"/>
-                        <viewControllerLayoutGuide type="bottom" id="bVf-6L-wFO"/>
+                        <viewControllerLayoutGuide type="top" id="cQW-R2-xF1"/>
+                        <viewControllerLayoutGuide type="bottom" id="4td-HA-IgL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4tZ-Pw-yvp">
+                    <view key="view" contentMode="scaleToFill" id="1tg-MN-amh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="rRi-iM-IEh"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wGD-tl-fU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1Q-0Q-CYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="385"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="kgM-oG-zlz">
-            <objects>
-                <viewController id="wC3-yh-xEq" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yrg-H7-6lE"/>
-                        <viewControllerLayoutGuide type="bottom" id="lgu-ST-IYH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JoX-lQ-GVM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aui-jC-9kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1382" y="385"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="MTX-LO-qHQ">
-            <objects>
-                <viewController id="eFa-ZJ-iB6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wX9-db-0Sf"/>
-                        <viewControllerLayoutGuide type="bottom" id="8wf-Ww-iGf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kfm-qK-sLa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pnq-y0-AXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1840" y="385"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="IFu-fh-70u">
-            <objects>
-                <viewController id="JwX-4l-swH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Heb-ud-2tE"/>
-                        <viewControllerLayoutGuide type="bottom" id="hW1-GT-HKy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MqH-ti-Vfu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sRj-U2-yK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2312" y="385"/>
-        </scene>
-        <!--View Controller - Cilindro-->
-        <scene sceneID="u6t-KR-fd3">
-            <objects>
-                <viewController title="Cilindro" id="q4N-i7-vef" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="9Nt-lU-7vB"/>
-                        <viewControllerLayoutGuide type="bottom" id="PlS-dD-ARB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aPw-AQ-Vqk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Cilindro" id="gwI-50-0Sf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oMg-lL-Xg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="526" y="-647"/>
-        </scene>
-        <!--View Controller - Círculo-->
-        <scene sceneID="4aD-eR-OpI">
-            <objects>
-                <viewController title="Círculo" id="K01-Zi-lo3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="QO1-oR-8hw"/>
-                        <viewControllerLayoutGuide type="bottom" id="fr4-CL-MdQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NWg-Ch-7l2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Círculo" id="12h-vA-RL0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="era-uT-IJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="934" y="-647"/>
-        </scene>
-        <!--View Controller - Cone-->
-        <scene sceneID="3hG-1Y-Aoj">
-            <objects>
-                <viewController title="Cone" id="nRg-nM-B5U" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="M5F-yw-zFg"/>
-                        <viewControllerLayoutGuide type="bottom" id="rru-U0-qfr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4pG-hi-BZf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Cone" id="GBb-u9-oOg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UvR-zB-wvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1382" y="-647"/>
-        </scene>
-        <!--Triangulo View Controller - Triângulo-->
-        <scene sceneID="ue6-OU-Xyo">
-            <objects>
-                <viewController id="ma2-Zw-Rtg" customClass="XGMTrianguloViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GWA-jP-w2W"/>
-                        <viewControllerLayoutGuide type="bottom" id="1fy-5M-iRQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fcb-BO-JW3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Triângulo" id="0kZ-rl-gRi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tx6-oA-Rmv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1840" y="-647"/>
-        </scene>
-        <!--View Controller - Quadrado-->
-        <scene sceneID="naM-ww-VP7">
-            <objects>
-                <viewController id="h8d-dg-L24" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ApQ-zg-fYn"/>
-                        <viewControllerLayoutGuide type="bottom" id="YYg-mf-rk8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sQj-yt-vSa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Quadrado" id="DiC-ny-RdV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vWb-ti-uMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2312" y="-647"/>
+            <point key="canvasLocation" x="950" y="27"/>
         </scene>
         <!--View Controller - Sobre-->
         <scene sceneID="QlD-xp-eAo">
@@ -260,6 +135,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xF-CN-v2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117" y="-647"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Adx-Lo-KjR">
+            <objects>
+                <viewController id="xxz-oQ-uT9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YDt-1O-tsw"/>
+                        <viewControllerLayoutGuide type="bottom" id="ea2-f4-9KW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ADR-ql-LqA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vMg-Dc-9m9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="krn-PA-459" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="-647"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bJQ-8o-qI4">

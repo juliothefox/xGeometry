@@ -1,20 +1,18 @@
 //
-//  XGMPrincipalTableViewController.m
+//  XGMFormaTableViewController.m
 //  xGeometry
 //
-//  Created by Júlio Menezes Noronha on 08/08/14.
+//  Created by Júlio Menezes Noronha on 12/08/14.
 //  Copyright (c) 2014 Júlio César Menezes Noronha. All rights reserved.
 //
 
-#import "XGMPrincipalTableViewController.h"
 #import "XGMFormaTableViewController.h"
 
-
-@interface XGMPrincipalTableViewController ()
+@interface XGMFormaTableViewController ()
 
 @end
 
-@implementation XGMPrincipalTableViewController
+@implementation XGMFormaTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -23,6 +21,25 @@
         // Custom initialization
     }
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if(!self.formaArray)
+    {
+        self.formaArray = [[NSMutableArray alloc]init];
+    }
+    
+    //Seta o título da view
+    self.title = [self.formaDictionary objectForKey:@"Forma"];
+    
+    //Cria um array para definir a textLabel das células da viewController
+    for(int i=1;i<self.formaDictionary.count;i++)
+    {
+        //Pega as strings do dictionary e adiciona ao array
+        [self.formaArray addObject:[self.formaDictionary objectForKey:[NSString stringWithFormat:@"Propriedade%d",i]]];
+    }
+    
 }
 
 - (void)viewDidLoad
@@ -35,8 +52,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
-    self.arrayPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"principalTableView" ofType:@"plist"]];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,47 +68,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return self.arrayPlist.count;
+    // count-1 pois o título não conta.
+    return self.formaDictionary.count - 1;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    //Dá o título da seção da tableView
-    switch (section) {
-        default:
-            return @"Formas geométricas";
-            break;
-    }
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    NSDictionary *formaDictionary = [self.arrayPlist objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = formaDictionary[@"Forma"];
+    cell.textLabel.text = [self.formaArray objectAtIndex:indexPath.row];
     
     return cell;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    self.index = indexPath.row;
-    [self performSegueWithIdentifier:@"forma" sender:self];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"forma"]){
-        XGMFormaTableViewController *view = [segue destinationViewController];
-        NSDictionary *dic = [self.arrayPlist objectAtIndex:self.index];
-        view.formaDictionary = dic;
-    }
-}
 
 /*
 // Override to support conditional editing of the table view.
@@ -130,6 +118,17 @@
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
+}
+*/
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
 */
 

@@ -2,19 +2,97 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<array>
+	<dict>
+		<key>Forma</key>
 		<string>Cilindro</string>
+		<key>Propriedade1</key>
+		<string>Área da base</string>
+		<key>Propriedade2</key>
+		<string>Área lateral</string>
+		<key>Propriedade3</key>
+		<string>Volume</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
 		<string>Círculo</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Circunferêcia</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
 		<string>Cone</string>
-		<string>Triângulo</string>
-		<string>Quadrado</string>
-	</array>
-	<array>
-		<string>Cilindro</string>
-		<string>Cone</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Volume</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
 		<string>Cubo</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Diagonal</string>
+		<key>Propriedade3</key>
+		<string>Volume</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
 		<string>Esfera</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Volume</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
 		<string>Pirâmide</string>
-	</array>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Volume</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
+		<string>Quadrado</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Diagonal</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
+		<string>Retângulo</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Diagonal</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
+		<string>Trapézio</string>
+		<key>Propriedade1</key>
+		<string>Altura</string>
+		<key>Propriedade2</key>
+		<string>Área</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
+		<string>Triângulo</string>
+		<key>Propriedade1</key>
+		<string>Altura</string>
+		<key>Propriedade2</key>
+		<string>Área</string>
+	</dict>
+	<dict>
+		<key>Forma</key>
+		<string>Tronco de cone</string>
+		<key>Propriedade1</key>
+		<string>Área</string>
+		<key>Propriedade2</key>
+		<string>Volume</string>
+	</dict>
 </array>
 </plist>

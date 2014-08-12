@@ -11,5 +11,6 @@
 @interface XGMPrincipalTableViewController : UITableViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic) NSArray *arrayPlist;
+@property (nonatomic) NSInteger index;
 
 @end
