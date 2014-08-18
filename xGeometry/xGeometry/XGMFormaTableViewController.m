@@ -7,6 +7,7 @@
 //
 
 #import "XGMFormaTableViewController.h"
+#import "XGMCalculoViewController.h"
 
 @interface XGMFormaTableViewController ()
 
@@ -72,6 +73,11 @@
     return self.formaDictionary.count - 1;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.propriedade = indexPath.row;
+    [self performSegueWithIdentifier:@"calculo" sender:self];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -82,6 +88,16 @@
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"calculo"]){
+        XGMCalculoViewController *view = [segue destinationViewController];
+        view.propriedade = self.propriedade;
+        view.forma = self.forma;
+        view.title = [self.formaDictionary objectForKey:[NSString stringWithFormat:@"Propriedade%d",self.propriedade+1]];
+    }
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -118,17 +134,6 @@
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 */
 

@@ -12,5 +12,7 @@
 
 @property (nonatomic) NSDictionary   *formaDictionary;
 @property (nonatomic) NSMutableArray *formaArray;
+@property (nonatomic) NSInteger forma;
+@property (nonatomic) NSInteger propriedade;
 
 @end

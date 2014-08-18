@@ -92,6 +92,7 @@
         XGMFormaTableViewController *view = [segue destinationViewController];
         NSDictionary *dic = [self.arrayPlist objectAtIndex:self.index];
         view.formaDictionary = dic;
+        view.forma = self.index;
     }
 }
 

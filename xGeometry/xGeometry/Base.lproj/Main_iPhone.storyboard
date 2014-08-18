@@ -98,20 +98,40 @@
             </objects>
             <point key="canvasLocation" x="540" y="27"/>
         </scene>
-        <!--View Controller-->
+        <!--Calculo View Controller-->
         <scene sceneID="iWs-CR-5w8">
             <objects>
-                <viewController id="bVc-PC-SNv" sceneMemberID="viewController">
+                <viewController id="bVc-PC-SNv" customClass="XGMCalculoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cQW-R2-xF1"/>
                         <viewControllerLayoutGuide type="bottom" id="4td-HA-IgL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1tg-MN-amh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryr-vT-YvD">
+                                <rect key="frame" x="110" y="100" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ski-6f-eGK">
+                                <rect key="frame" x="130" y="225" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uy-Jc-PgH">
+                                <rect key="frame" x="130" y="385" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="rRi-iM-IEh"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1Q-0Q-CYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,7 +156,7 @@
             </objects>
             <point key="canvasLocation" x="117" y="-647"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Explicação-->
         <scene sceneID="Adx-Lo-KjR">
             <objects>
                 <viewController id="xxz-oQ-uT9" sceneMemberID="viewController">
@@ -149,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vMg-Dc-9m9"/>
+                    <navigationItem key="navigationItem" title="Explicação" id="vMg-Dc-9m9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krn-PA-459" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

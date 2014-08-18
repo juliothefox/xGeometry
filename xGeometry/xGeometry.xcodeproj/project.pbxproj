@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */; };
+		43C4E58519A29991009BE472 /* XGMCalculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C4E58419A29991009BE472 /* XGMCalculoViewController.m */; };
 		43CF0D56199548AE00ECC2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D55199548AE00ECC2AC /* Foundation.framework */; };
 		43CF0D58199548AE00ECC2AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D57199548AE00ECC2AC /* CoreGraphics.framework */; };
 		43CF0D5A199548AE00ECC2AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D59199548AE00ECC2AC /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		432C4CCE199A90D900162D4D /* XGMFormaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMFormaTableViewController.h; sourceTree = "<group>"; };
 		432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMFormaTableViewController.m; sourceTree = "<group>"; };
+		43C4E58319A29991009BE472 /* XGMCalculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCalculoViewController.h; sourceTree = "<group>"; };
+		43C4E58419A29991009BE472 /* XGMCalculoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCalculoViewController.m; sourceTree = "<group>"; };
 		43CF0D52199548AE00ECC2AC /* xGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CF0D55199548AE00ECC2AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43CF0D57199548AE00ECC2AC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,8 @@
 		432C4CD1199A9BD600162D4D /* CalculoViewController */ = {
 			isa = PBXGroup;
 			children = (
+				43C4E58319A29991009BE472 /* XGMCalculoViewController.h */,
+				43C4E58419A29991009BE472 /* XGMCalculoViewController.m */,
 			);
 			name = CalculoViewController;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */,
+				43C4E58519A29991009BE472 /* XGMCalculoViewController.m in Sources */,
 				43CF0D62199548AE00ECC2AC /* main.m in Sources */,
 				43CF0D66199548AE00ECC2AC /* XGMAppDelegate.m in Sources */,
 				43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */,
