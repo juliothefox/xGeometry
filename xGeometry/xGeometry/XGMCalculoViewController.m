@@ -7,6 +7,9 @@
 //
 
 #import "XGMCalculoViewController.h"
+#define CILINDRO 0
+#define CIRCULO 1
+#define CONE 2
 
 @interface XGMCalculoViewController ()
 
@@ -46,19 +49,35 @@
 {
     switch (self.forma) {
         
-        case 0:
+        case CILINDRO:
             if(self.propriedade == 0){
                 self.view = [self areaLateralCilindro];
             }else{
-                self.view = [self volumeCilindro];
+                if(self.propriedade == 1){
+                    self.view = [self areaTotalCilindro];
+                }else{
+                    self.view = [self volumeCilindro];
+                }
             }
             break;
             
-        case 1:
+        case CIRCULO:
             if(self.propriedade == 0){
                 self.view = [self areaCirculo];
             }else{
                 self.view = [self circunferenciaCirculo];
+            }
+            break;
+        
+        case CONE:
+            if(self.propriedade == 0){
+                self.view = [self areaLateralCone];
+            }else{
+                if(self.propriedade == 1){
+                    self.view = [self areaTotalCone];
+                }else{
+                    self.view = [self volumeCone];
+                }
             }
             break;
             
@@ -207,6 +226,37 @@
     return view;
 }
 
+-(UIView *)areaTotalCilindro
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    raioTF.borderStyle = UITextBorderStyleRoundedRect;
+    raioTF.placeholder = @"Raio";
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    alturaTF.borderStyle = UITextBorderStyleRoundedRect;
+    alturaTF.placeholder = @"Altura";
+    alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCilindro)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCilindro *cilindro = [[XGMCilindro alloc]init];
+    cilindro.base = [[XGMCirculo alloc]init];
+    cilindro.base.raioTF = raioTF;
+    cilindro.alturaTF = alturaTF;
+    self.cilindro = cilindro;
+    
+    [view addSubview:raioTF];
+    [view addSubview:alturaTF];
+    
+    return view;
+}
+
 -(UIView *)volumeCilindro
 {
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
@@ -234,6 +284,99 @@
     
     [view addSubview:raioTF];
     [view addSubview:alturaTF];
+    
+    return view;
+}
+
+-(UIView *)areaLateralCone
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    raioTF.borderStyle = UITextBorderStyleRoundedRect;
+    raioTF.placeholder = @"Raio";
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
+    geratrizTF.placeholder = @"Geratriz";
+    geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCone)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCone *cone = [[XGMCone alloc]init];
+    cone.base = [[XGMCirculo alloc]init];
+    cone.base.raioTF = raioTF;
+    cone.geratrizTF = geratrizTF;
+    self.cone = cone;
+    
+    [view addSubview:raioTF];
+    [view addSubview:geratrizTF];
+    
+    return view;
+}
+
+-(UIView *)areaTotalCone
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    raioTF.borderStyle = UITextBorderStyleRoundedRect;
+    raioTF.placeholder = @"Raio";
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
+    geratrizTF.placeholder = @"Geratriz";
+    geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCone)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCone *cone = [[XGMCone alloc]init];
+    cone.base = [[XGMCirculo alloc]init];
+    cone.base.raioTF = raioTF;
+    cone.geratrizTF = geratrizTF;
+    self.cone = cone;
+    
+    [view addSubview:raioTF];
+    [view addSubview:geratrizTF];
+    
+    return view;
+}
+
+-(UIView *)volumeCone
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    raioTF.borderStyle = UITextBorderStyleRoundedRect;
+    raioTF.placeholder = @"Raio";
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *aluraTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    aluraTF.borderStyle = UITextBorderStyleRoundedRect;
+    aluraTF.placeholder = @"Altura";
+    aluraTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeCone)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCone *cone = [[XGMCone alloc]init];
+    cone.base = [[XGMCirculo alloc]init];
+    cone.base.raioTF = raioTF;
+    cone.alturaTF = aluraTF;
+    self.cone = cone;
+    
+    [view addSubview:raioTF];
+    [view addSubview:aluraTF];
     
     return view;
 }
@@ -268,9 +411,33 @@
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 
+-(void)calculaAreaTotalCilindro
+{
+    self.resultado = [self.cilindro calculaAreaTotal];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
 -(void)calculaVolumeCilindro
 {
     self.resultado = [self.cilindro calculaVolume];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaLateralCone
+{
+    self.resultado = [self.cone calculaAreaLateral];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaTotalCone
+{
+    self.resultado = [self.cone calculaAreaTotal];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaVolumeCone
+{
+    self.resultado = [self.cone calculaVolume];
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 

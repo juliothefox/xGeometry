@@ -11,6 +11,7 @@
 #import "XGMQuadrado.h"
 #import "XGMCirculo.h"
 #import "XGMCilindro.h"
+#import "XGMCone.h"
 
 @interface XGMCalculoViewController : UIViewController
 
@@ -21,19 +22,28 @@
 @property (nonatomic) XGMQuadrado *quadrado;
 @property (nonatomic) XGMCirculo *circulo;
 @property (nonatomic) XGMCilindro *cilindro;
+@property (nonatomic) XGMCone *cone;
 
 -(UIView *)areaQuadrado;
 -(UIView *)diagonalQuadrado;
 -(UIView *)areaCirculo;
 -(UIView *)circunferenciaCirculo;
 -(UIView *)areaLateralCilindro;
+-(UIView *)areaTotalCilindro;
 -(UIView *)volumeCilindro;
+-(UIView *)areaLateralCone;
+-(UIView *)areaTotalCone;
+-(UIView *)volumeCone;
 
 -(void) calculaAreaQuadrado;
 -(void) calculaDiagonalQuadrado;
 -(void) calculaAreaCirculo;
 -(void) calculaCircunferenciaCirculo;
 -(void) calculaAreaLateralCilindro;
+-(void) calculaAreaTotalCilindro;
 -(void) calculaVolumeCilindro;
+-(void) calculaAreaLateralCone;
+-(void) calculaAreaTotalCone;
+-(void) calculaVolumeCone;
 
 @end

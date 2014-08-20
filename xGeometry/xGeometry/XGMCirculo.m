@@ -30,8 +30,9 @@
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nAc = 2.π.r\n"]];
+    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nCc = 2.π.r\n"]];
     [str appendString:[NSString stringWithFormat:@"Cc = 2.π.%d\n",self.raio]];
+    [str appendString:[NSString stringWithFormat:@"Cc = %d.π\n",2 * self.raio]];
     [str appendString:[NSString stringWithFormat:@"Cc = %f\n",2 * self.raio * 3.14]];
     
     return str;

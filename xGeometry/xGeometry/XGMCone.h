@@ -1,5 +1,5 @@
 //
-//  XGMCilindro.h
+//  XGMCone.h
 //  xGeometry
 //
 //  Created by Júlio Menezes Noronha on 20/08/14.
@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XGMCirculo.h"
+#import "XGMCilindro.h"
 
-@interface XGMCilindro : NSObject
+@interface XGMCone : NSObject
 
-@property XGMCirculo *base;
+@property (nonatomic) XGMCirculo *base;
+@property (nonatomic) IBOutlet UITextField *geratrizTF;
+@property (nonatomic) NSInteger geratriz;
 @property (nonatomic) IBOutlet UITextField *alturaTF;
-@property NSInteger altura;
+@property (nonatomic) NSInteger altura;
 
 -(NSString *)calculaAreaLateral;
 -(NSString *)calculaAreaTotal;
