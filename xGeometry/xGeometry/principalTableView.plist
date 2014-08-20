@@ -6,10 +6,8 @@
 		<key>Forma</key>
 		<string>Cilindro</string>
 		<key>Propriedade1</key>
-		<string>Área da base</string>
-		<key>Propriedade2</key>
 		<string>Área lateral</string>
-		<key>Propriedade3</key>
+		<key>Propriedade2</key>
 		<string>Volume</string>
 	</dict>
 	<dict>

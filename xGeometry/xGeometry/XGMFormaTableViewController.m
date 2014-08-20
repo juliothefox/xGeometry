@@ -94,7 +94,7 @@
         XGMCalculoViewController *view = [segue destinationViewController];
         view.propriedade = self.propriedade;
         view.forma = self.forma;
-        view.title = [self.formaDictionary objectForKey:[NSString stringWithFormat:@"Propriedade%d",self.propriedade+1]];
+        view.title = [self.formaDictionary objectForKey:[NSString stringWithFormat:@"Propriedade%d",(int)self.propriedade+1]];
     }
     
 }
