@@ -13,6 +13,7 @@
 		431E1C2519A5021A00DB1383 /* XGMCirculo.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2419A5021A00DB1383 /* XGMCirculo.m */; };
 		431E1C2919A50B0100DB1383 /* XGMCilindro.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2819A50B0100DB1383 /* XGMCilindro.m */; };
 		431E1C2D19A511E700DB1383 /* XGMCone.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2C19A511E700DB1383 /* XGMCone.m */; };
+		431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3119A53AF400DB1383 /* XGMCubo.m */; };
 		432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */; };
 		43C4E58519A29991009BE472 /* XGMCalculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C4E58419A29991009BE472 /* XGMCalculoViewController.m */; };
 		43CF0D56199548AE00ECC2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D55199548AE00ECC2AC /* Foundation.framework */; };
@@ -56,6 +57,8 @@
 		431E1C2819A50B0100DB1383 /* XGMCilindro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCilindro.m; sourceTree = "<group>"; };
 		431E1C2B19A511E700DB1383 /* XGMCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCone.h; sourceTree = "<group>"; };
 		431E1C2C19A511E700DB1383 /* XGMCone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCone.m; sourceTree = "<group>"; };
+		431E1C3019A53AF400DB1383 /* XGMCubo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCubo.h; sourceTree = "<group>"; };
+		431E1C3119A53AF400DB1383 /* XGMCubo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCubo.m; sourceTree = "<group>"; };
 		432C4CCE199A90D900162D4D /* XGMFormaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMFormaTableViewController.h; sourceTree = "<group>"; };
 		432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMFormaTableViewController.m; sourceTree = "<group>"; };
 		43C4E58319A29991009BE472 /* XGMCalculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCalculoViewController.h; sourceTree = "<group>"; };
@@ -161,6 +164,28 @@
 			name = Cone;
 			sourceTree = "<group>";
 		};
+		431E1C2E19A53ACA00DB1383 /* Cubo */ = {
+			isa = PBXGroup;
+			children = (
+				431E1C3019A53AF400DB1383 /* XGMCubo.h */,
+				431E1C3119A53AF400DB1383 /* XGMCubo.m */,
+			);
+			name = Cubo;
+			sourceTree = "<group>";
+		};
+		431E1C2F19A53AD900DB1383 /* Formas */ = {
+			isa = PBXGroup;
+			children = (
+				431E1C2E19A53ACA00DB1383 /* Cubo */,
+				431E1C2619A5094300DB1383 /* Cilindro */,
+				431E1C2219A5020800DB1383 /* Circulo */,
+				431E1C2A19A511C700DB1383 /* Cone */,
+				431E1C1E19A4FF5B00DB1383 /* Triangulo */,
+				431E1C1619A4E38F00DB1383 /* Quadrado */,
+			);
+			name = Formas;
+			sourceTree = "<group>";
+		};
 		432C4CCD199A90C100162D4D /* FormaTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,11 +200,6 @@
 			children = (
 				43C4E58319A29991009BE472 /* XGMCalculoViewController.h */,
 				43C4E58419A29991009BE472 /* XGMCalculoViewController.m */,
-				431E1C2619A5094300DB1383 /* Cilindro */,
-				431E1C2219A5020800DB1383 /* Circulo */,
-				431E1C2A19A511C700DB1383 /* Cone */,
-				431E1C1E19A4FF5B00DB1383 /* Triangulo */,
-				431E1C1619A4E38F00DB1383 /* Quadrado */,
 			);
 			name = CalculoViewController;
 			sourceTree = "<group>";
@@ -223,6 +243,7 @@
 				43CF0D9019955B6B00ECC2AC /* PrincipalTableViewController */,
 				432C4CCD199A90C100162D4D /* FormaTableViewController */,
 				432C4CD1199A9BD600162D4D /* CalculoViewController */,
+				431E1C2F19A53AD900DB1383 /* Formas */,
 				431E1C1A19A4E74B00DB1383 /* ResultadoViewController */,
 				43CF0D70199548AE00ECC2AC /* Images.xcassets */,
 				43CF0D5C199548AE00ECC2AC /* Supporting Files */,
@@ -395,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				431E1C2519A5021A00DB1383 /* XGMCirculo.m in Sources */,
+				431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */,
 				431E1C1D19A4E76400DB1383 /* XGMResultadoViewController.m in Sources */,
 				432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */,
 				431E1C2119A4FF7000DB1383 /* XGMTriangulo.m in Sources */,

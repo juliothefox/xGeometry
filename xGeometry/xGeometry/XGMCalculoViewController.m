@@ -10,6 +10,8 @@
 #define CILINDRO 0
 #define CIRCULO 1
 #define CONE 2
+#define CUBO 3
+#define QUADRADO 6
 
 @interface XGMCalculoViewController ()
 
@@ -81,7 +83,23 @@
             }
             break;
             
-        case 6:
+        case CUBO:
+            if(self.propriedade == 0){
+                self.view = [self areaLateralCubo];
+            }else{
+                if(self.propriedade == 1){
+                    self.view = [self areaTotalCubo];
+                }else{
+                    if(self.propriedade == 2){
+                        self.view = [self diagonalCubo];
+                    }else{
+                        self.view = [self volumeCubo];
+                    }
+                }
+            }
+            break;
+            
+        case QUADRADO:
             if(self.propriedade == 0){
                 self.view = [self areaQuadrado];
             }else{
@@ -381,6 +399,98 @@
     return view;
 }
 
+-(UIView *)areaLateralCubo
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCubo)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCubo *cubo = [[XGMCubo alloc]init];
+    cubo.ladoTF = ladoTF;
+    self.cubo = cubo;
+    
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
+-(UIView *)areaTotalCubo
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCubo)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCubo *cubo = [[XGMCubo alloc]init];
+    cubo.ladoTF = ladoTF;
+    self.cubo = cubo;
+    
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
+-(UIView *)diagonalCubo
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaDiagonalCubo)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCubo *cubo = [[XGMCubo alloc]init];
+    cubo.ladoTF = ladoTF;
+    self.cubo = cubo;
+    
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
+-(UIView *)volumeCubo
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeCubo)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMCubo *cubo = [[XGMCubo alloc]init];
+    cubo.ladoTF = ladoTF;
+    self.cubo = cubo;
+    
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
 -(void)calculaAreaQuadrado
 {
     self.resultado = [self.quadrado calculaArea];
@@ -438,6 +548,30 @@
 -(void)calculaVolumeCone
 {
     self.resultado = [self.cone calculaVolume];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaLateralCubo
+{
+    self.resultado = [self.cubo calculaAreaLateral];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaTotalCubo
+{
+    self.resultado = [self.cubo calculaAreaTotal];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaDiagonalCubo
+{
+    self.resultado = [self.cubo calculaDiagonal];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaVolumeCubo
+{
+    self.resultado = [self.cubo calculaVolume];
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 

@@ -34,10 +34,12 @@
 		<key>Forma</key>
 		<string>Cubo</string>
 		<key>Propriedade1</key>
-		<string>Área</string>
+		<string>Área Lateral</string>
 		<key>Propriedade2</key>
-		<string>Diagonal</string>
+		<string>Área Total</string>
 		<key>Propriedade3</key>
+		<string>Diagonal</string>
+		<key>Propriedade4</key>
 		<string>Volume</string>
 	</dict>
 	<dict>
