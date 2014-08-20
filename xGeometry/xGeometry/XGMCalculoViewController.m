@@ -11,6 +11,7 @@
 #define CIRCULO 1
 #define CONE 2
 #define CUBO 3
+#define ESFERA 4
 #define QUADRADO 6
 
 @interface XGMCalculoViewController ()
@@ -96,6 +97,14 @@
                         self.view = [self volumeCubo];
                     }
                 }
+            }
+            break;
+            
+        case ESFERA:
+            if(self.propriedade == 0){
+                self.view = [self areaEsfera];
+            }else{
+                self.view = [self volumeEsfera];
             }
             break;
             
@@ -491,6 +500,52 @@
     return view;
 }
 
+-(UIView *)areaEsfera
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    raioTF.borderStyle = UITextBorderStyleRoundedRect;
+    raioTF.placeholder = @"Raio";
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaEsfera)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMEsfera *esfera = [[XGMEsfera alloc]init];
+    esfera.raioTF = raioTF;
+    self.esfera = esfera;
+    
+    [view addSubview:raioTF];
+    
+    return view;
+}
+
+-(UIView *)volumeEsfera
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    raioTF.borderStyle = UITextBorderStyleRoundedRect;
+    raioTF.placeholder = @"Raio";
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeEsfera)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMEsfera *esfera = [[XGMEsfera alloc]init];
+    esfera.raioTF = raioTF;
+    self.esfera = esfera;
+    
+    [view addSubview:raioTF];
+    
+    return view;
+}
+
 -(void)calculaAreaQuadrado
 {
     self.resultado = [self.quadrado calculaArea];
@@ -572,6 +627,18 @@
 -(void)calculaVolumeCubo
 {
     self.resultado = [self.cubo calculaVolume];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaEsfera
+{
+    self.resultado = [self.esfera calculaArea];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaVolumeEsfera
+{
+    self.resultado = [self.esfera calculaVolume];
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 

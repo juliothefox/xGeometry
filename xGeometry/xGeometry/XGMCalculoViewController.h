@@ -13,6 +13,7 @@
 #import "XGMCilindro.h"
 #import "XGMCone.h"
 #import "XGMCubo.h"
+#import "XGMEsfera.h"
 
 @interface XGMCalculoViewController : UIViewController
 
@@ -25,6 +26,7 @@
 @property (nonatomic) XGMCilindro *cilindro;
 @property (nonatomic) XGMCone *cone;
 @property (nonatomic) XGMCubo *cubo;
+@property (nonatomic) XGMEsfera *esfera;
 
 -(UIView *) areaQuadrado;
 -(UIView *) diagonalQuadrado;
@@ -40,6 +42,8 @@
 -(UIView *) areaTotalCubo;
 -(UIView *) diagonalCubo;
 -(UIView *) volumeCubo;
+-(UIView *) areaEsfera;
+-(UIView *) volumeEsfera;
 
 -(void) calculaAreaQuadrado;
 -(void) calculaDiagonalQuadrado;
@@ -55,5 +59,7 @@
 -(void) calculaAreaTotalCubo;
 -(void) calculaDiagonalCubo;
 -(void) calculaVolumeCubo;
+-(void) calculaAreaEsfera;
+-(void) calculaVolumeEsfera;
 
 @end

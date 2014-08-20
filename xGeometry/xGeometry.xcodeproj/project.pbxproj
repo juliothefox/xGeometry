@@ -14,6 +14,7 @@
 		431E1C2919A50B0100DB1383 /* XGMCilindro.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2819A50B0100DB1383 /* XGMCilindro.m */; };
 		431E1C2D19A511E700DB1383 /* XGMCone.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2C19A511E700DB1383 /* XGMCone.m */; };
 		431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3119A53AF400DB1383 /* XGMCubo.m */; };
+		431E1C3619A5416200DB1383 /* XGMEsfera.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3519A5416200DB1383 /* XGMEsfera.m */; };
 		432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */; };
 		43C4E58519A29991009BE472 /* XGMCalculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C4E58419A29991009BE472 /* XGMCalculoViewController.m */; };
 		43CF0D56199548AE00ECC2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D55199548AE00ECC2AC /* Foundation.framework */; };
@@ -59,6 +60,8 @@
 		431E1C2C19A511E700DB1383 /* XGMCone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCone.m; sourceTree = "<group>"; };
 		431E1C3019A53AF400DB1383 /* XGMCubo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCubo.h; sourceTree = "<group>"; };
 		431E1C3119A53AF400DB1383 /* XGMCubo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCubo.m; sourceTree = "<group>"; };
+		431E1C3419A5416200DB1383 /* XGMEsfera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMEsfera.h; sourceTree = "<group>"; };
+		431E1C3519A5416200DB1383 /* XGMEsfera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMEsfera.m; sourceTree = "<group>"; };
 		432C4CCE199A90D900162D4D /* XGMFormaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMFormaTableViewController.h; sourceTree = "<group>"; };
 		432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMFormaTableViewController.m; sourceTree = "<group>"; };
 		43C4E58319A29991009BE472 /* XGMCalculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCalculoViewController.h; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 		431E1C2F19A53AD900DB1383 /* Formas */ = {
 			isa = PBXGroup;
 			children = (
+				431E1C3319A5415700DB1383 /* Esfera */,
 				431E1C2E19A53ACA00DB1383 /* Cubo */,
 				431E1C2619A5094300DB1383 /* Cilindro */,
 				431E1C2219A5020800DB1383 /* Circulo */,
@@ -184,6 +188,15 @@
 				431E1C1619A4E38F00DB1383 /* Quadrado */,
 			);
 			name = Formas;
+			sourceTree = "<group>";
+		};
+		431E1C3319A5415700DB1383 /* Esfera */ = {
+			isa = PBXGroup;
+			children = (
+				431E1C3419A5416200DB1383 /* XGMEsfera.h */,
+				431E1C3519A5416200DB1383 /* XGMEsfera.m */,
+			);
+			name = Esfera;
 			sourceTree = "<group>";
 		};
 		432C4CCD199A90C100162D4D /* FormaTableViewController */ = {
@@ -417,6 +430,7 @@
 			files = (
 				431E1C2519A5021A00DB1383 /* XGMCirculo.m in Sources */,
 				431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */,
+				431E1C3619A5416200DB1383 /* XGMEsfera.m in Sources */,
 				431E1C1D19A4E76400DB1383 /* XGMResultadoViewController.m in Sources */,
 				432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */,
 				431E1C2119A4FF7000DB1383 /* XGMTriangulo.m in Sources */,
