@@ -14,6 +14,7 @@
 #import "XGMCone.h"
 #import "XGMCubo.h"
 #import "XGMEsfera.h"
+#import "XGMRetangulo.h"
 
 @interface XGMCalculoViewController : UIViewController
 
@@ -27,6 +28,7 @@
 @property (nonatomic) XGMCone *cone;
 @property (nonatomic) XGMCubo *cubo;
 @property (nonatomic) XGMEsfera *esfera;
+@property (nonatomic) XGMRetangulo *retangulo;
 
 -(UIView *) areaQuadrado;
 -(UIView *) diagonalQuadrado;
@@ -44,6 +46,9 @@
 -(UIView *) volumeCubo;
 -(UIView *) areaEsfera;
 -(UIView *) volumeEsfera;
+-(UIView *) areaRetangulo;
+-(UIView *) diagonalRetangulo;
+-(UIView *) 
 
 -(void) calculaAreaQuadrado;
 -(void) calculaDiagonalQuadrado;
@@ -61,5 +66,7 @@
 -(void) calculaVolumeCubo;
 -(void) calculaAreaEsfera;
 -(void) calculaVolumeEsfera;
+-(void) calculaAreaRetangulo;
+-(void) calculaDiagonalRetangulo;
 
 @end

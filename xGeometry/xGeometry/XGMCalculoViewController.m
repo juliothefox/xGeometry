@@ -13,6 +13,7 @@
 #define CUBO 3
 #define ESFERA 4
 #define QUADRADO 6
+#define RETANGULO 7
 
 @interface XGMCalculoViewController ()
 
@@ -113,6 +114,14 @@
                 self.view = [self areaQuadrado];
             }else{
                 self.view = [self diagonalQuadrado];
+            }
+            break;
+            
+        case RETANGULO:
+            if(self.propriedade == 0){
+                self.view = [self areaRetangulo];
+            }else{
+                self.view = [self diagonalRetangulo];
             }
             break;
             
@@ -546,6 +555,66 @@
     return view;
 }
 
+-(UIView *)areaRetangulo
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    baseTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseTF.placeholder = @"Base";
+    baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    alturaTF.borderStyle = UITextBorderStyleRoundedRect;
+    alturaTF.placeholder = @"Altura";
+    alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaRetangulo)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMRetangulo *retangulo = [[XGMRetangulo alloc]init];
+    retangulo.baseTF = baseTF;
+    retangulo.alturaTF = alturaTF;
+    self.retangulo = retangulo;
+    
+    [view addSubview:baseTF];
+    [view addSubview:alturaTF];
+    
+    return view;
+}
+
+-(UIView *)diagonalRetangulo
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    baseTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseTF.placeholder = @"Base";
+    baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    alturaTF.borderStyle = UITextBorderStyleRoundedRect;
+    alturaTF.placeholder = @"Altura";
+    alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaDiagonalRetangulo)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMRetangulo *retangulo = [[XGMRetangulo alloc]init];
+    retangulo.baseTF = baseTF;
+    retangulo.alturaTF = alturaTF;
+    self.retangulo = retangulo;
+    
+    [view addSubview:baseTF];
+    [view addSubview:alturaTF];
+    
+    return view;
+}
+
 -(void)calculaAreaQuadrado
 {
     self.resultado = [self.quadrado calculaArea];
@@ -639,6 +708,18 @@
 -(void)calculaVolumeEsfera
 {
     self.resultado = [self.esfera calculaVolume];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaRetangulo
+{
+    self.resultado = [self.retangulo calculaArea];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaDiagonalRetangulo
+{
+    self.resultado = [self.retangulo calculaDiagonal];
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 
