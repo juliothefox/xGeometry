@@ -12,9 +12,11 @@
 #define CONE 2
 #define CUBO 3
 #define ESFERA 4
+#define PIRAMIDE 5
 #define QUADRADO 6
 #define RETANGULO 7
 #define TRAPEZIO 8
+#define TRIANGULO 9
 #define TRONCO_DE_CONE 10
 
 @interface XGMCalculoViewController ()
@@ -133,6 +135,26 @@
             }
             break;
             
+        case TRIANGULO:
+            if(self.propriedade == 0){
+                self.view = [self alturaTrianguloEquilatero];
+            }else{
+                if(self.propriedade == 1){
+                    self.view = [self alturaTrianguloIsosceles];
+                }else{
+                    if(self.propriedade == 2){
+                        self.view = [self areaTrianguloEquilatero];
+                    }else{
+                        if(self.propriedade == 3){
+                            self.view = [self areaTrianguloIsosceles];
+                        }else{
+                            self.title = @"Pitágoras";
+                        }
+                    }
+                }
+            }
+            break;
+            
         case TRONCO_DE_CONE:
             if(self.propriedade == 0){
                 self.view = [self areaTroncoDeCone];
@@ -151,7 +173,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -183,7 +205,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -206,7 +228,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -229,7 +251,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -252,12 +274,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -283,12 +305,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -314,12 +336,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -345,12 +367,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
     geratrizTF.placeholder = @"Geratriz";
     geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -376,12 +398,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
     geratrizTF.placeholder = @"Geratriz";
     geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -407,12 +429,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *aluraTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *aluraTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     aluraTF.borderStyle = UITextBorderStyleRoundedRect;
     aluraTF.placeholder = @"Altura";
     aluraTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -438,7 +460,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -461,7 +483,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -484,7 +506,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -507,7 +529,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -530,7 +552,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -553,7 +575,7 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -576,12 +598,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -606,12 +628,12 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -636,17 +658,17 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Base";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 100, 80, 30)];
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 70, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Base";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -673,17 +695,17 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Raio";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 100, 80, 30)];
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 70, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Raio";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Geratriz";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -712,17 +734,17 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Raio";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 100, 80, 30)];
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 70, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Raio";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -746,6 +768,111 @@
     return view;
 }
 
+-(UIView *)alturaTrianguloEquilatero
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAlturaTrianguloEquilatero)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTriangulo *triangulo = [[XGMTriangulo alloc]init];
+    triangulo.ladoTF = ladoTF;
+    self.triangulo = triangulo;
+    
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
+-(UIView *)areaTrianguloEquilatero
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTrianguloEquilatero)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTriangulo *triangulo = [[XGMTriangulo alloc]init];
+    triangulo.ladoTF = ladoTF;
+    self.triangulo = triangulo;
+    
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
+-(UIView *)alturaTrianguloIsosceles
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    baseTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseTF.placeholder = @"Base";
+    baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAlturaTrianguloIsosceles)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTriangulo *triangulo = [[XGMTriangulo alloc]init];
+    triangulo.baseTF  = baseTF;
+    triangulo.ladoTF = ladoTF;
+    self.triangulo = triangulo;
+    
+    [view addSubview:baseTF];
+    [view addSubview:ladoTF];
+    
+    return view;
+}
+
+-(UIView *)areaTrianguloIsosceles
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    baseTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseTF.placeholder = @"Base";
+    baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    ladoTF.borderStyle = UITextBorderStyleRoundedRect;
+    ladoTF.placeholder = @"Lado";
+    ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTrianguloIsosceles)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTriangulo *triangulo = [[XGMTriangulo alloc]init];
+    triangulo.baseTF  = baseTF;
+    triangulo.ladoTF = ladoTF;
+    self.triangulo = triangulo;
+    
+    [view addSubview:baseTF];
+    [view addSubview:ladoTF];
+    
+    return view;
+}
 
 -(void)calculaAreaQuadrado
 {
@@ -870,6 +997,30 @@
 -(void)calculaVolumeTroncoDeCone
 {
     self.resultado = [self.troncoDeCone calculaVolume];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAlturaTrianguloEquilatero
+{
+    self.resultado = [self.triangulo calculaAlturaEquilatero];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAlturaTrianguloIsosceles
+{
+    self.resultado = [self.triangulo calculaAlturaIsosceles];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaTrianguloEquilatero
+{
+    self.resultado = [self.triangulo calculaAreaEquilatero];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaTrianguloIsosceles
+{
+    self.resultado = [self.triangulo calculaAreaIsosceles];
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 

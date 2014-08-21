@@ -14,7 +14,9 @@
 #import "XGMCone.h"
 #import "XGMCubo.h"
 #import "XGMEsfera.h"
+#import "XGMPiramide.h"
 #import "XGMRetangulo.h"
+#import "XGMTriangulo.h"
 #import "XGMTrapezio.h"
 #import "XGMTroncoDeCone.h"
 
@@ -30,8 +32,10 @@
 @property (nonatomic) XGMCone *cone;
 @property (nonatomic) XGMCubo *cubo;
 @property (nonatomic) XGMEsfera *esfera;
+@property (nonatomic) XGMPiramide *piramide;
 @property (nonatomic) XGMRetangulo *retangulo;
 @property (nonatomic) XGMTrapezio *trapezio;
+@property (nonatomic) XGMTriangulo *triangulo;
 @property (nonatomic) XGMTroncoDeCone *troncoDeCone;
 
 -(UIView *) areaQuadrado;
@@ -55,6 +59,10 @@
 -(UIView *) areaTrapezio;
 -(UIView *) areaTroncoDeCone;
 -(UIView *) volumeTroncoDeCone;
+-(UIView *) alturaTrianguloEquilatero;
+-(UIView *) alturaTrianguloIsosceles;
+-(UIView *) areaTrianguloEquilatero;
+-(UIView *) areaTrianguloIsosceles;
 
 -(void) calculaAreaQuadrado;
 -(void) calculaDiagonalQuadrado;
@@ -77,5 +85,9 @@
 -(void) calculaAreaTrapezio;
 -(void) calculaAreaTroncoDeCone;
 -(void) calculaVolumeTroncoDeCone;
-
+-(void) calculaAlturaTrianguloEquilatero;
+-(void) calculaAlturaTrianguloIsosceles;
+-(void) calculaAreaTrianguloEquilatero;
+-(void) calculaAreaTrianguloIsosceles;
+  
 @end

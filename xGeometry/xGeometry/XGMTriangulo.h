@@ -10,9 +10,15 @@
 
 @interface XGMTriangulo : NSObject
 
-@property (nonatomic) NSInteger tipo;
+@property (nonatomic) IBOutlet UITextField *baseTF;
+@property (nonatomic) IBOutlet UITextField *ladoTF;
+
 @property (nonatomic) NSInteger base;
 @property (nonatomic) NSInteger lado;
-@property (nonatomic) NSInteger altura;
+
+-(NSString *)calculaAlturaEquilatero;
+-(NSString *)calculaAreaEquilatero;
+-(NSString *)calculaAlturaIsosceles;
+-(NSString *)calculaAreaIsosceles;
 
 @end
