@@ -59,7 +59,7 @@
     self.lado = [self.ladoTF.text integerValue];
     self.base = [self.baseTF.text integerValue];
     
-    float altura = sqrtf((float)((self.lado*self.lado) - ((self.base/2) * (self.base/2))));
+    float altura = sqrtf((float)((self.lado * self.lado) - ((self.base/2) * (self.base/2))));
     
     NSMutableString *str = [[NSMutableString alloc]init];
     

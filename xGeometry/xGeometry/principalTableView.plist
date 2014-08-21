@@ -52,14 +52,6 @@
 	</dict>
 	<dict>
 		<key>Forma</key>
-		<string>Pirâmide</string>
-		<key>Propriedade1</key>
-		<string>Área</string>
-		<key>Propriedade2</key>
-		<string>Volume</string>
-	</dict>
-	<dict>
-		<key>Forma</key>
 		<string>Quadrado</string>
 		<key>Propriedade1</key>
 		<string>Área</string>
@@ -91,8 +83,6 @@
 		<string>Área - Equilátero</string>
 		<key>Propriedade4</key>
 		<string>Área - Isósceles</string>
-		<key>Propriedade5</key>
-		<string>Teorema de Pitágoras</string>
 	</dict>
 	<dict>
 		<key>Forma</key>

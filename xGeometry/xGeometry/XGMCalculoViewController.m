@@ -12,12 +12,11 @@
 #define CONE 2
 #define CUBO 3
 #define ESFERA 4
-#define PIRAMIDE 5
-#define QUADRADO 6
-#define RETANGULO 7
-#define TRAPEZIO 8
-#define TRIANGULO 9
-#define TRONCO_DE_CONE 10
+#define QUADRADO 5
+#define RETANGULO 6
+#define TRAPEZIO 7
+#define TRIANGULO 8
+#define TRONCO_DE_CONE 9
 
 @interface XGMCalculoViewController ()
 
