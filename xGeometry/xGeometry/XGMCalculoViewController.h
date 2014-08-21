@@ -15,6 +15,8 @@
 #import "XGMCubo.h"
 #import "XGMEsfera.h"
 #import "XGMRetangulo.h"
+#import "XGMTrapezio.h"
+#import "XGMTroncoDeCone.h"
 
 @interface XGMCalculoViewController : UIViewController
 
@@ -29,6 +31,8 @@
 @property (nonatomic) XGMCubo *cubo;
 @property (nonatomic) XGMEsfera *esfera;
 @property (nonatomic) XGMRetangulo *retangulo;
+@property (nonatomic) XGMTrapezio *trapezio;
+@property (nonatomic) XGMTroncoDeCone *troncoDeCone;
 
 -(UIView *) areaQuadrado;
 -(UIView *) diagonalQuadrado;
@@ -48,7 +52,9 @@
 -(UIView *) volumeEsfera;
 -(UIView *) areaRetangulo;
 -(UIView *) diagonalRetangulo;
--(UIView *) 
+-(UIView *) areaTrapezio;
+-(UIView *) areaTroncoDeCone;
+-(UIView *) volumeTroncoDeCone;
 
 -(void) calculaAreaQuadrado;
 -(void) calculaDiagonalQuadrado;
@@ -68,5 +74,8 @@
 -(void) calculaVolumeEsfera;
 -(void) calculaAreaRetangulo;
 -(void) calculaDiagonalRetangulo;
+-(void) calculaAreaTrapezio;
+-(void) calculaAreaTroncoDeCone;
+-(void) calculaVolumeTroncoDeCone;
 
 @end

@@ -14,6 +14,8 @@
 #define ESFERA 4
 #define QUADRADO 6
 #define RETANGULO 7
+#define TRAPEZIO 8
+#define TRONCO_DE_CONE 10
 
 @interface XGMCalculoViewController ()
 
@@ -122,6 +124,20 @@
                 self.view = [self areaRetangulo];
             }else{
                 self.view = [self diagonalRetangulo];
+            }
+            break;
+            
+        case TRAPEZIO:
+            if(self.propriedade == 0){
+                self.view = [self areaTrapezio];
+            }
+            break;
+            
+        case TRONCO_DE_CONE:
+            if(self.propriedade == 0){
+                self.view = [self areaTroncoDeCone];
+            }else{
+                self.view = [self volumeTroncoDeCone];
             }
             break;
             
@@ -615,6 +631,122 @@
     return view;
 }
 
+-(UIView *)areaTrapezio
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseMaiorTF.placeholder = @"Base";
+    baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 100, 80, 30)];
+    baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseMenorTF.placeholder = @"Base";
+    baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    alturaTF.borderStyle = UITextBorderStyleRoundedRect;
+    alturaTF.placeholder = @"Altura";
+    alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTrapezio)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTrapezio *trapezio = [[XGMTrapezio alloc]init];
+    trapezio.baseMenorTF  = baseMenorTF;
+    trapezio.baseMaiorTF  = baseMaiorTF;
+    trapezio.alturaTF     = alturaTF;
+    self.trapezio = trapezio;
+    
+    [view addSubview:baseMenorTF];
+    [view addSubview:baseMaiorTF];
+    [view addSubview:alturaTF];
+    
+    return view;
+}
+
+-(UIView *)areaTroncoDeCone
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseMaiorTF.placeholder = @"Raio";
+    baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 100, 80, 30)];
+    baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseMenorTF.placeholder = @"Raio";
+    baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    alturaTF.borderStyle = UITextBorderStyleRoundedRect;
+    alturaTF.placeholder = @"Geratriz";
+    alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTroncoDeCone)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTroncoDeCone *troncoDeCone = [[XGMTroncoDeCone alloc]init];
+    troncoDeCone.baseMaior  = [[XGMCirculo alloc]init];
+    troncoDeCone.baseMenor  = [[XGMCirculo alloc]init];
+    troncoDeCone.baseMaior.raioTF  = baseMaiorTF;
+    troncoDeCone.baseMenor.raioTF  = baseMenorTF;
+    troncoDeCone.geratrizTF   = alturaTF;
+    self.troncoDeCone = troncoDeCone;
+    
+    [view addSubview:baseMenorTF];
+    [view addSubview:baseMaiorTF];
+    [view addSubview:alturaTF];
+    
+    return view;
+}
+
+-(UIView *)volumeTroncoDeCone
+{
+    UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    view.backgroundColor = [UIColor whiteColor];
+    
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 240, 80, 30)];
+    baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseMaiorTF.placeholder = @"Raio";
+    baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 100, 80, 30)];
+    baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
+    baseMenorTF.placeholder = @"Raio";
+    baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 160, 80, 30)];
+    alturaTF.borderStyle = UITextBorderStyleRoundedRect;
+    alturaTF.placeholder = @"Altura";
+    alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    
+    UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeTroncoDeCone)];
+    
+    self.navigationItem.rightBarButtonItem = calcularBtn;
+    
+    XGMTroncoDeCone *troncoDeCone = [[XGMTroncoDeCone alloc]init];
+    troncoDeCone.baseMaior  = [[XGMCirculo alloc]init];
+    troncoDeCone.baseMenor  = [[XGMCirculo alloc]init];
+    troncoDeCone.baseMaior.raioTF  = baseMaiorTF;
+    troncoDeCone.baseMenor.raioTF  = baseMenorTF;
+    troncoDeCone.geratrizTF   = alturaTF;
+    self.troncoDeCone = troncoDeCone;
+    
+    [view addSubview:baseMenorTF];
+    [view addSubview:baseMaiorTF];
+    [view addSubview:alturaTF];
+    
+    return view;
+}
+
+
 -(void)calculaAreaQuadrado
 {
     self.resultado = [self.quadrado calculaArea];
@@ -720,6 +852,24 @@
 -(void)calculaDiagonalRetangulo
 {
     self.resultado = [self.retangulo calculaDiagonal];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaTrapezio
+{
+    self.resultado = [self.trapezio calculaArea];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaAreaTroncoDeCone
+{
+    self.resultado = [self.troncoDeCone calculaArea];
+    [self performSegueWithIdentifier:@"resultado" sender:self];
+}
+
+-(void)calculaVolumeTroncoDeCone
+{
+    self.resultado = [self.troncoDeCone calculaVolume];
     [self performSegueWithIdentifier:@"resultado" sender:self];
 }
 

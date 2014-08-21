@@ -78,8 +78,6 @@
 		<key>Forma</key>
 		<string>Trapézio</string>
 		<key>Propriedade1</key>
-		<string>Altura</string>
-		<key>Propriedade2</key>
 		<string>Área</string>
 	</dict>
 	<dict>
