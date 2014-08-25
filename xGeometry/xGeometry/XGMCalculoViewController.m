@@ -181,15 +181,6 @@
     
     self.navigationItem.rightBarButtonItem = calcularBtn;
     
-    /* UIButton programaticamente
-    UIButton *calcularButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [calcularButton addTarget:self action:@selector(calculaAreaQuadrado:) forControlEvents:UIControlEventTouchUpInside];
-    calcularButton.frame = CGRectMake(130, 380, 60, 30);
-    [calcularButton setTitle:@"Calcular" forState:UIControlStateNormal];
-    calcularButton.titleLabel.textColor = [UIColor blueColor];
-    calcularButton.enabled = YES;
-     */
-    
     XGMQuadrado *quadrado = [[XGMQuadrado alloc]init];
     quadrado.ladoTF = ladoTF;
     self.quadrado = quadrado;

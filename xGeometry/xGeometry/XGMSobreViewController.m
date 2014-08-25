@@ -1,18 +1,18 @@
 //
-//  XGMResultadoViewController.m
+//  XGMSobreViewController.m
 //  xGeometry
 //
-//  Created by Júlio Menezes Noronha on 20/08/14.
+//  Created by Júlio Menezes Noronha on 25/08/14.
 //  Copyright (c) 2014 Júlio César Menezes Noronha. All rights reserved.
 //
 
-#import "XGMResultadoViewController.h"
+#import "XGMSobreViewController.h"
 
-@interface XGMResultadoViewController ()
+@interface XGMSobreViewController ()
 
 @end
 
-@implementation XGMResultadoViewController
+@implementation XGMSobreViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,9 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Resultado";
-    self.resultadoTV.frame = [[UIScreen mainScreen]bounds];
-    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];;
+    self.sobreTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    self.sobre = @"xGeometry\n\nVersão 1.0\nCriado por Júlio César Menezes Noronha\nTodos os direitos reservados.";
     
     NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
     [notification addObserver:self selector:@selector(updateFont) name:UIContentSizeCategoryDidChangeNotification object:nil];
@@ -36,12 +35,18 @@
 
 -(void)updateFont
 {
-    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];;
+    self.sobreTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+}
+
+-(void)dealloc
+{
+    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+    [notification removeObserver:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    self.resultadoTV.text = self.resultado;
+    self.sobreTV.text = self.sobre;
     [self updateFont];
 }
 
@@ -49,12 +54,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)dealloc
-{
-    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
-    [notification removeObserver:self];
 }
 
 @end

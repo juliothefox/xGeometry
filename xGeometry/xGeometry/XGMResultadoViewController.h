@@ -10,7 +10,7 @@
 
 @interface XGMResultadoViewController : UIViewController
 
-@property (nonatomic) IBOutlet UITextView *resultadoTV;
+@property (weak, nonatomic) IBOutlet UITextView *resultadoTV;
 @property (nonatomic) NSString *resultado;
 
 -(void)updateFont;
