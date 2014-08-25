@@ -62,6 +62,8 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
+    [self updateFont];
+    
     switch (self.forma) {
         
         case CILINDRO:
@@ -113,12 +115,16 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
+    [str appendString:@"Cilindro\n\nO cilindro é um objeto tridimensional obtido pela rotação de um retângulo.\n\nFórmulas:\n\n1 - Área lateral\n\nA área lateral pode ser considerada um retângulo, pois se planificarmos um cilindro, obtemos 2 círculos e um retângulo, então podemos aplicar a área do retângulo na área lateral do cilindro:\n\nAl = B . h\n\nMas como a base é a circunferência de um círculo, substituímos sua base pela circunferência do círculo:\n\nAl = (2 . π . r) . h\n\nEntão:\n\nAl = 2 . π . r . h\n\nAl = Área lateral\nπ = Constante PI\nr = Raio da base do cilindro\nh = Altura do cilindro\n\n2 - Área total\n\nA Área total é a soma da área lateral com as áreas das duas bases:\n\nAt = Al + 2 Ab\nAt = (2 . π . r . h) + 2 . (π . r²)\nAt = 2 . π . r (r + h)\n\nAt = Área total\nAl = Área lateral\nAb = Área da base\nπ = Constante PI\nr = Raio da base do cilindro\nh = Altura do cilindro\n\n3 - Volume\n\nO volume é definido pelo produto da área da base vezes a altura.\n\nV = Ab . h\n\nV = Volume do cilindro\nAb = Área da base\nh = Altura\n"];
+    
     return str;
 }
 
 -(NSString *)explicacaoCirculo
 {
     NSMutableString *str = [[NSMutableString alloc]init];
+    
+    [str appendString:@""];
     
     return str;
 }
@@ -127,6 +133,8 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
+    [str appendString:@""];
+    
     return str;
 }
 
@@ -134,12 +142,16 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
+    [str appendString:@""];
+    
     return str;
 }
 
 -(NSString *)explicacaoEsfera
 {
     NSMutableString *str = [[NSMutableString alloc]init];
+    
+    [str appendString:@""];
     
     return str;
 }
