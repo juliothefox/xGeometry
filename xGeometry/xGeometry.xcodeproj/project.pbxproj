@@ -295,8 +295,8 @@
 				43CF0D9019955B6B00ECC2AC /* PrincipalTableViewController */,
 				432C4CCD199A90C100162D4D /* FormaTableViewController */,
 				432C4CD1199A9BD600162D4D /* CalculoViewController */,
-				431E1C2F19A53AD900DB1383 /* Formas */,
 				431E1C1A19A4E74B00DB1383 /* ResultadoViewController */,
+				431E1C2F19A53AD900DB1383 /* Formas */,
 				43CF0D70199548AE00ECC2AC /* Images.xcassets */,
 				43CF0D5C199548AE00ECC2AC /* Supporting Files */,
 			);

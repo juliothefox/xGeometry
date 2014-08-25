@@ -21,7 +21,7 @@
     [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nA = π . g . (R + r)\n"]];
     [str appendString:[NSString stringWithFormat:@"A = π . %d . (%d + %d)\n",_geratriz,_baseMaior.raio,_baseMenor.raio]];
     [str appendString:[NSString stringWithFormat:@"A = π . %d . %d",_geratriz,_baseMaior.raio + _baseMenor.raio]];
-    [str appendString:[NSString stringWithFormat:@"A = %dπ\nA = %f",_geratriz * (_baseMaior.raio + _baseMenor.raio),(_geratriz * (_baseMaior.raio + _baseMenor.raio)) * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"A = %dπ\nA = %f u²",_geratriz * (_baseMaior.raio + _baseMenor.raio),(_geratriz * (_baseMaior.raio + _baseMenor.raio)) * 3.14]];
     
     return str;
 }
@@ -48,7 +48,7 @@
 
     resultado = resultado/3;
     [str appendString:[NSString stringWithFormat:@"V = %f . π\n",resultado]];
-    [str appendString:[NSString stringWithFormat:@"V = %f",resultado * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"V = %f u³",resultado * 3.14]];
     
     return str;
 }

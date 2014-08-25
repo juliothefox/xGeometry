@@ -27,17 +27,33 @@
 {
     [super viewDidLoad];
     self.title = @"Resultado";
+    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];;
+    
+    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+    [notification addObserver:self selector:@selector(updateFont) name:UIContentSizeCategoryDidChangeNotification object:nil];
+}
+
+-(void)updateFont
+{
+    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     self.resultadoTV.text = self.resultado;
+    [self updateFont];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)dealloc
+{
+    NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
+    [notification removeObserver:self];
 }
 
 /*

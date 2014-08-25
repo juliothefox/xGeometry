@@ -17,7 +17,7 @@
     NSMutableString *str = [[NSMutableString alloc]init];
     [str appendString:@"Aq = l²\n"];
     [str appendString:[NSString stringWithFormat:@"Aq = %d²\n",self.lado]];
-    [str appendString:[NSString stringWithFormat:@"Aq = %d\n",self.lado*self.lado]];
+    [str appendString:[NSString stringWithFormat:@"Aq = %d u²\n",self.lado*self.lado]];
     
     return str;
 }
@@ -28,7 +28,7 @@
     
     NSMutableString *str = [[NSMutableString alloc]init];
     [str appendString:@"Dq = l.√2\n"];
-    [str appendString:[NSString stringWithFormat:@"Dq = %d√2\n",self.lado]];
+    [str appendString:[NSString stringWithFormat:@"Dq = %d√2 u\n",self.lado]];
     
     return str;
 }

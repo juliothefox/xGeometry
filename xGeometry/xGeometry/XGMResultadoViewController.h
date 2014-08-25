@@ -13,4 +13,6 @@
 @property (nonatomic) IBOutlet UITextView *resultadoTV;
 @property (nonatomic) NSString *resultado;
 
+-(void)updateFont;
+
 @end

@@ -18,7 +18,7 @@
     
     [str appendString:[NSString stringWithFormat:@"Al = 4 . l²\nAl = 4 . %d²\n",self.lado]];
     [str appendString:[NSString stringWithFormat:@"Al = 4 . %d\n",self.lado * 4]];
-    [str appendString:[NSString stringWithFormat:@"Al = %d\n",self.lado * self.lado * 4]];
+    [str appendString:[NSString stringWithFormat:@"Al = %d u²\n",self.lado * self.lado * 4]];
     
     return str;
 }
@@ -31,7 +31,7 @@
     
     [str appendString:[NSString stringWithFormat:@"At = 6 . l²\nAt = 6 . %d²\n",self.lado]];
     [str appendString:[NSString stringWithFormat:@"At = 6 . %d\n",self.lado * 6]];
-    [str appendString:[NSString stringWithFormat:@"At = %d\n",self.lado * self.lado * 6]];
+    [str appendString:[NSString stringWithFormat:@"At = %d u²\n",self.lado * self.lado * 6]];
     
     return str;
 }
@@ -42,7 +42,7 @@
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Dc = l√3\nDc = %d√3",self.lado]];
+    [str appendString:[NSString stringWithFormat:@"Dc = l√3\nDc = %d√3 u",self.lado]];
     
     return str;
 }
@@ -53,7 +53,7 @@
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Vc = l³\nVc = %d³\nVc = %d",self.lado,self.lado*self.lado*self.lado]];
+    [str appendString:[NSString stringWithFormat:@"Vc = l³\nVc = %d³\nVc = %d u³",self.lado,self.lado*self.lado*self.lado]];
     
     return str;
 }
