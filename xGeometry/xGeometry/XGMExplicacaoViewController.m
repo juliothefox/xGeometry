@@ -62,8 +62,6 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self updateFont];
-    
     switch (self.forma) {
         
         case CILINDRO:
@@ -109,6 +107,8 @@
         default:
             break;
     }
+    
+    [self updateFont];
 }
 
 -(NSString *)explicacaoCilindro
@@ -124,7 +124,7 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:@""];
+    [str appendString:@"Círculo\n\nO círculo é o conjunto de todos os pontos de um plano onde sua distância a um ponto fixo P é menor ou igual a uma distância R dada.\n\nA circunferência é o lugar geométrico de todos os pontos de um plano localizados a uma distância R do centro da circunferência.\n\nFórmulas:\n\n1 - Área do círculo\n\nA = π . r²\n(A área é igual a PI vezes o raio ao quadrado)\n\nA = Área\nπ = Constante PI\nr = Raio do círculo\n\n2 - Circunferência\n\nC = 2 . π . r\n(A circunferência do círculo é duas vezes PI vezes o raio)\n\nπ = Constante PI\nr = Raio do círculo\n"];
     
     return str;
 }
@@ -133,7 +133,7 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:@""];
+    [str appendString:@"Cone\n\nO cone é um objeto tridimensional obtido pela rotação de um triângulo retângulo.\n\nFórmulas:\n\n1 - Área Lateral\n\nAl = π . r . g\n\nAl = Área Lateral\nπ = Constante PI\nr = Raio da base do cone\ng = Geratriz do cone\n\n2 - Área Total\n\nA área total do cone é a soma da área lateral e a área da base.\nComo a base é um círculo, usamos sua fórmula de área na área da base.\n\nAt = Al + Ab\nAt = π . r . g + π . r²\nAt = π . r . (g + r)\n\nAt = Área total\nAl = Área lateral\nπ = Constante PI\ng = Geratriz do cone\nr = Raio da base do cone\n\n3 - Volume\n\nO volume do cone é calculado pela seguinte fórmula:\n\nV = 1/3 . π . r² . h\n(Volume do cone é um terço do produto da área da base pela altura)\n\nV = Volume do cone\nr = Raio da base do cone\nh = Altura do cone\n"];
     
     return str;
 }
@@ -142,7 +142,7 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:@""];
+    [str appendString:@"Cubo\n\nO cubo é um polígono regular de 6 faces, 12 arestas e 8 vértices.\n\nFórmulas:\n\n1 - Área Lateral\n\nA área lateral de um cubo consiste na área das faces laterais, desconsiderando a base e o topo\n\nAl = 4L²\n(Área lateral é igual a quatro vezes o lado ao quadrado)\n\nAl = Área lateral\nL = Lado do cubo\n\n2 - Área total\n\nA área total do cubo é a soma das áreas de todas as faces.\n\nAt = 6L²\n(Área total é igual a seis vezes o lado ao quadrado)\n\nAt = Área total\nL = Lado do cubo\n\n3 - Diagonal\n\nA diagonal de um cubo pode ser vista como um triângulo retângulo, sendo a hipotenusa a diagonal do cubo, e os catetos sendo o lado do cubo e a diagonal da base.\n\nDc² = L² + Db²\n\nComo a base é um quadrado, podemos aplicar a diagonal do quadrado na diagonal da base\n\nDc² = L² + (L√2)²\nDc² = L² + 2 . L²\nDc² = 3 . L²\nDc = √3 . L²\nDc = L √3\n(Diagonal do cubo é o lado vezes a raiz quadrada de três)\n\nDc = Diagonal do cubo\nDb = Diagonal da base\nL = Lado do cubo\n\n4 - Volume\n\nO volume do cubo é calculado pela fórmula\n\nV = L³\n(Volume é o lado ao cubo)\n\nV = Volume\nL = Lado do cubo\n"];
     
     return str;
 }
@@ -151,7 +151,7 @@
 {
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:@""];
+    [str appendString:@"Esfera\n\nA esfera é um objeto tridimensional obtido pela rotação de um círculo.\n\nFórmulas:\n\n1 - Área\n\nA = 4 . π . r²\n\nA = Área da esfera\nπ = Constante PI\nr = Raio da esfera\n2 - Volume\n\nV = 4/3 . π . r³\n\nV = Volume da esfera\nπ = Constante PI\nr = Raio da esfera\n"];
     
     return str;
 }
