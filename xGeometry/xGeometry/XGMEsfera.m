@@ -27,11 +27,14 @@
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
+    float x;
+    
     [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14\nVe = 4/3 . π . r³\n"]];
     [str appendString:[NSString stringWithFormat:@"Ve = 4/3 . π . %d³\n",self.raio]];
     [str appendString:[NSString stringWithFormat:@"Ve = 4/3 . %d . π\n",self.raio * self.raio * self.raio]];
     [str appendString:[NSString stringWithFormat:@"Ve = %f . π\n",(float)(self.raio * self.raio * self.raio*4)/3]];
-    [str appendString:[NSString stringWithFormat:@"Ve = %f u³",((self.raio * self.raio * self.raio*4)/3) * 3.14]];
+    x = (float)(self.raio * self.raio * self.raio*4)/3;
+    [str appendString:[NSString stringWithFormat:@"Ve = %f u³",x * 3.14]];
     
     return str;
 }

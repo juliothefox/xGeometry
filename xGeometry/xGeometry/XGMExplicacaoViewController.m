@@ -100,6 +100,10 @@
             self.explicacaoTV.text = [self explicacaoTriangulo];
             break;
             
+        case TRONCO_DE_CONE:
+            self.explicacaoTV.text = [self explicacaoTroncoDeCone];
+            break;
+            
         default:
             break;
     }
@@ -180,6 +184,8 @@
 -(NSString *)explicacaoTroncoDeCone
 {
     NSMutableString *str = [[NSMutableString alloc]init];
+    
+    [str appendString:@"Tronco de cone\n\nO tronco de cone é uma fatia cortada de um cone.\n\nFórmulas:\n\n1 - Área\n\nA = π . g (R + r)\n\nA = Área\nπ = Constante PI\ng = Geratriz\nR = Raio maior\nr = Raio menor\n2 - Volume\n\nV =  π . h/3 . (r² + r . R + R²)\n\nV = Volume\nπ = Constante PI\nh = Altura\nR = Raio maior\nr = Raio menor\n"];
     
     return str;
 }
