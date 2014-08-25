@@ -13,7 +13,17 @@
 @property (nonatomic) IBOutlet UITextView *explicacaoTV;
 @property (nonatomic) NSInteger forma;
 
--(NSString *)explicacaoQuadrado;
 -(void)updateFont;
+
+-(NSString *)explicacaoCilindro;
+-(NSString *)explicacaoCirculo;
+-(NSString *)explicacaoCone;
+-(NSString *)explicacaoCubo;
+-(NSString *)explicacaoEsfera;
+-(NSString *)explicacaoQuadrado;
+-(NSString *)explicacaoRetangulo;
+-(NSString *)explicacaoTrapezio;
+-(NSString *)explicacaoTriangulo;
+-(NSString *)explicacaoTroncoDeCone;
 
 @end
