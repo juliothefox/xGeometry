@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PrincipalTableView</key>
+	<array>
+		<string>main_cilindro.png</string>
+		<string>main_circulo.png</string>
+		<string>main_cone.png</string>
+		<string>main_cubo.png</string>
+		<string>main_esfera.png</string>
+		<string>main_quadrado.png</string>
+		<string>main_retangulo.png</string>
+		<string>main_triangulo.png</string>
+		<string>main_trapezio.png</string>
+		<string>main_troncoDeCone.png</string>
+	</array>
+	<key>FormaTableView</key>
+	<array>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+	</array>
+	<key>CalculoViewController</key>
+	<array>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+		<string></string>
+	</array>
+</dict>
+</plist>

@@ -33,6 +33,10 @@
 
     self.arrayPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"principalTableView" ofType:@"plist"]];
     
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"icones" ofType:@"plist"]];
+    
+    self.arrayIcons = dic[@"PrincipalTableView"];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,8 +76,14 @@
     NSDictionary *formaDictionary = [self.arrayPlist objectAtIndex:indexPath.row];
     
     cell.textLabel.text = formaDictionary[@"Forma"];
+    cell.imageView.image = [UIImage imageNamed:[self.arrayIcons objectAtIndex:indexPath.row]];
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
