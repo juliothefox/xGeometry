@@ -11,8 +11,8 @@
 		<string>main_esfera.png</string>
 		<string>main_quadrado.png</string>
 		<string>main_retangulo.png</string>
-		<string>main_triangulo.png</string>
 		<string>main_trapezio.png</string>
+		<string>main_triangulo.png</string>
 		<string>main_troncoDeCone.png</string>
 	</array>
 	<key>FormaTableView</key>

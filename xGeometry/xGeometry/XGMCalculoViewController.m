@@ -147,8 +147,6 @@
                     }else{
                         if(self.propriedade == 3){
                             self.view = [self areaTrianguloIsosceles];
-                        }else{
-                            self.title = @"Pitágoras";
                         }
                     }
                 }
@@ -156,11 +154,13 @@
             break;
             
         case TRONCO_DE_CONE:
+            
             if(self.propriedade == 0){
                 self.view = [self areaTroncoDeCone];
             }else{
                 self.view = [self volumeTroncoDeCone];
             }
+            
             break;
             
         default:
@@ -174,7 +174,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"quadrado_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -197,7 +201,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"quadrado_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -220,7 +228,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"circulo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -243,7 +255,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"circulo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -266,12 +282,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cilindro_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -297,12 +317,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cilindro_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -328,12 +352,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cilindro_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -359,12 +387,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cone_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
     geratrizTF.placeholder = @"Geratriz";
     geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -390,12 +422,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cone_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
     geratrizTF.placeholder = @"Geratriz";
     geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -421,12 +457,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cone_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *aluraTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *aluraTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     aluraTF.borderStyle = UITextBorderStyleRoundedRect;
     aluraTF.placeholder = @"Altura";
     aluraTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -452,7 +492,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cubo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -475,7 +519,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cubo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -498,7 +546,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cubo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -521,7 +573,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"cubo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -544,7 +600,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"esfera_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -567,7 +627,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"esfera_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -590,12 +654,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"retangulo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -620,12 +688,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"retangulo_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -650,17 +722,21 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"trapezio_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Base";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 70, 80, 30)];
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 10, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Base";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -687,17 +763,21 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"troncoDeCone_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Raio";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 70, 80, 30)];
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 10, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Raio";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Geratriz";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -726,17 +806,21 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"troncoDeCone_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseMaiorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Raio";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 70, 80, 30)];
+    UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 10, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Raio";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -765,7 +849,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"trianguloEquilatero_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -788,7 +876,11 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"trianguloEquilatero_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -811,12 +903,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"trianguloIsosceles_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
@@ -841,12 +937,16 @@
     UIView *view = [[UIView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     view.backgroundColor = [UIColor whiteColor];
     
-    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 210, 80, 30)];
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(110, 40, 100, 100)];
+    imageView.image = [UIImage imageNamed:@"trianguloIsosceles_icon.png"];
+    [view addSubview:imageView];
+    
+    UITextField *baseTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
     
-    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 130, 80, 30)];
+    UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;

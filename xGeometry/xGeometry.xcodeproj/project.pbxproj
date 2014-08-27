@@ -16,6 +16,7 @@
 		431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3119A53AF400DB1383 /* XGMCubo.m */; };
 		431E1C3619A5416200DB1383 /* XGMEsfera.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3519A5416200DB1383 /* XGMEsfera.m */; };
 		432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */; };
+		43484C9F19AE4E4A0054A836 /* trianguloIsosceles_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */; };
 		43564D9419AD240B00FE9EBB /* icones.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43564D9319AD240B00FE9EBB /* icones.plist */; };
 		43564DBB19AD272300FE9EBB /* main_cilindro.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DB119AD272300FE9EBB /* main_cilindro.png */; };
 		43564DBC19AD272300FE9EBB /* main_circulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DB219AD272300FE9EBB /* main_circulo.png */; };
@@ -43,7 +44,6 @@
 		43564DE619AD275900FE9EBB /* retangulo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDB19AD275900FE9EBB /* retangulo_icon.png */; };
 		43564DE719AD275900FE9EBB /* trapezio_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDC19AD275900FE9EBB /* trapezio_icon.png */; };
 		43564DE819AD275900FE9EBB /* trianguloEquilatero_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDD19AD275900FE9EBB /* trianguloEquilatero_icon.png */; };
-		43564DE919AD275900FE9EBB /* trianguloIsosceles.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDE19AD275900FE9EBB /* trianguloIsosceles.png */; };
 		43564DEA19AD275900FE9EBB /* troncoDeCone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDF19AD275900FE9EBB /* troncoDeCone_icon.png */; };
 		43597F9919AB74EC00E0052D /* XGMExplicacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43597F9819AB74EC00E0052D /* XGMExplicacaoViewController.m */; };
 		43597F9C19AB74FB00E0052D /* XGMSobreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43597F9B19AB74FB00E0052D /* XGMSobreViewController.m */; };
@@ -98,6 +98,7 @@
 		431E1C3519A5416200DB1383 /* XGMEsfera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMEsfera.m; sourceTree = "<group>"; };
 		432C4CCE199A90D900162D4D /* XGMFormaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMFormaTableViewController.h; sourceTree = "<group>"; };
 		432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMFormaTableViewController.m; sourceTree = "<group>"; };
+		43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trianguloIsosceles_icon.png; path = Icones/calculoViewController/trianguloIsosceles_icon.png; sourceTree = "<group>"; };
 		43564D9319AD240B00FE9EBB /* icones.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = icones.plist; sourceTree = "<group>"; };
 		43564DB119AD272300FE9EBB /* main_cilindro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main_cilindro.png; path = Icones/principalTableView/main_cilindro.png; sourceTree = "<group>"; };
 		43564DB219AD272300FE9EBB /* main_circulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = main_circulo.png; path = Icones/principalTableView/main_circulo.png; sourceTree = "<group>"; };
@@ -125,7 +126,6 @@
 		43564DDB19AD275900FE9EBB /* retangulo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retangulo_icon.png; path = Icones/calculoViewController/retangulo_icon.png; sourceTree = "<group>"; };
 		43564DDC19AD275900FE9EBB /* trapezio_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trapezio_icon.png; path = Icones/calculoViewController/trapezio_icon.png; sourceTree = "<group>"; };
 		43564DDD19AD275900FE9EBB /* trianguloEquilatero_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trianguloEquilatero_icon.png; path = Icones/calculoViewController/trianguloEquilatero_icon.png; sourceTree = "<group>"; };
-		43564DDE19AD275900FE9EBB /* trianguloIsosceles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trianguloIsosceles.png; path = Icones/calculoViewController/trianguloIsosceles.png; sourceTree = "<group>"; };
 		43564DDF19AD275900FE9EBB /* troncoDeCone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = troncoDeCone_icon.png; path = Icones/calculoViewController/troncoDeCone_icon.png; sourceTree = "<group>"; };
 		43597F9719AB74EC00E0052D /* XGMExplicacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMExplicacaoViewController.h; sourceTree = "<group>"; };
 		43597F9819AB74EC00E0052D /* XGMExplicacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMExplicacaoViewController.m; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 				43564DDB19AD275900FE9EBB /* retangulo_icon.png */,
 				43564DDC19AD275900FE9EBB /* trapezio_icon.png */,
 				43564DDD19AD275900FE9EBB /* trianguloEquilatero_icon.png */,
-				43564DDE19AD275900FE9EBB /* trianguloIsosceles.png */,
+				43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */,
 				43564DDF19AD275900FE9EBB /* troncoDeCone_icon.png */,
 			);
 			name = CalculoViewController;
@@ -607,7 +607,6 @@
 				43CF0D9619955CB500ECC2AC /* principalTableView.plist in Resources */,
 				43564DBD19AD272300FE9EBB /* main_cone.png in Resources */,
 				43564D9419AD240B00FE9EBB /* icones.plist in Resources */,
-				43564DE919AD275900FE9EBB /* trianguloIsosceles.png in Resources */,
 				43564DE219AD275900FE9EBB /* cone_icon.png in Resources */,
 				43564DC019AD272300FE9EBB /* main_quadrado.png in Resources */,
 				43564DE719AD275900FE9EBB /* trapezio_icon.png in Resources */,
@@ -621,6 +620,7 @@
 				43564DC319AD272300FE9EBB /* main_triangulo.png in Resources */,
 				43564DC419AD272300FE9EBB /* main_troncoDeCone.png in Resources */,
 				43564DD019AD274300FE9EBB /* areaTotal_icon.png in Resources */,
+				43484C9F19AE4E4A0054A836 /* trianguloIsosceles_icon.png in Resources */,
 				43564DCD19AD274300FE9EBB /* altura_icon.png in Resources */,
 				43564DEA19AD275900FE9EBB /* troncoDeCone_icon.png in Resources */,
 			);
