@@ -43,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
@@ -165,6 +166,7 @@
         default:
             break;
     }
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
 }
 
 -(UIView *)areaQuadrado

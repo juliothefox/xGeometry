@@ -79,9 +79,45 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.formaArray objectAtIndex:indexPath.row];
+    NSString *titulo = [self.formaArray objectAtIndex:indexPath.row];
+    NSString *imagePath;
+    
+    cell.textLabel.text = titulo;
+    
+    if([titulo isEqualToString:@"Área"]){
+        imagePath = @"area_icon.png";
+    }else{
+        if([titulo isEqualToString:@"Área lateral"]){
+            imagePath = @"areaLateral_icon.png";
+        }else{
+            if([titulo isEqualToString:@"Área total"]){
+                imagePath = @"areaTotal_icon.png";
+            }else{
+                if([titulo isEqualToString:@"Circunferência"]){
+                    imagePath = @"circunferencia_icon.png";
+                }else{
+                    if([titulo isEqualToString:@"Diagonal"]){
+                        imagePath = @"diagonal_icon.png";
+                    }else{
+                        if([titulo isEqualToString:@"Volume"]){
+                            imagePath = @"volume_icon.png";
+                        }else{
+                            imagePath = @"altura_icon.png";
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    cell.imageView.image = [UIImage imageNamed:imagePath];
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60.0;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

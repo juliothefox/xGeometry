@@ -30,6 +30,7 @@
     [super viewDidLoad];
 
     self.clearsSelectionOnViewWillAppear = YES;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
     self.arrayPlist = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"principalTableView" ofType:@"plist"]];
     
@@ -37,6 +38,8 @@
     
     self.arrayIcons = dic[@"PrincipalTableView"];
     
+    self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,15 +60,15 @@
     return self.arrayPlist.count;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    //Dá o título da seção da tableView
-    switch (section) {
-        default:
-            return @"Formas geométricas";
-            break;
-    }
-}
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    //Dá o título da seção da tableView
+//    switch (section) {
+//        default:
+//            return @"Formas geométricas";
+//            break;
+//    }
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

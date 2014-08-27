@@ -28,7 +28,8 @@
     [super viewDidLoad];
     self.title = @"Resultado";
     self.resultadoTV.frame = [[UIScreen mainScreen]bounds];
-    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];;
+    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+    self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     
     NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
     [notification addObserver:self selector:@selector(updateFont) name:UIContentSizeCategoryDidChangeNotification object:nil];
@@ -36,7 +37,7 @@
 
 -(void)updateFont
 {
-    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];;
+    self.resultadoTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
 }
 
 -(void)viewWillAppear:(BOOL)animated

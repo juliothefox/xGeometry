@@ -18,15 +18,15 @@
 		<key>Propriedade1</key>
 		<string>Área</string>
 		<key>Propriedade2</key>
-		<string>Circunferêcia</string>
+		<string>Circunferência</string>
 	</dict>
 	<dict>
 		<key>Forma</key>
 		<string>Cone</string>
 		<key>Propriedade1</key>
-		<string>Área Lateral</string>
+		<string>Área lateral</string>
 		<key>Propriedade2</key>
-		<string>Área Total</string>
+		<string>Área total</string>
 		<key>Propriedade3</key>
 		<string>Volume</string>
 	</dict>
@@ -34,9 +34,9 @@
 		<key>Forma</key>
 		<string>Cubo</string>
 		<key>Propriedade1</key>
-		<string>Área Lateral</string>
+		<string>Área lateral</string>
 		<key>Propriedade2</key>
-		<string>Área Total</string>
+		<string>Área total</string>
 		<key>Propriedade3</key>
 		<string>Diagonal</string>
 		<key>Propriedade4</key>
