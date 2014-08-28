@@ -21,6 +21,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -28,6 +29,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //Checa se é o primeiro uso
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenTutorial"] == NO){
+        //Mostra o tutorial
+        UIAlertView *alert = [[UIAlertView alloc] init];
+        alert.title = @"First Use";
+        [alert addButtonWithTitle:@"OK"];
+        [alert show];
+        
+        //Atualiza que o app já foi usado
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 
     self.clearsSelectionOnViewWillAppear = YES;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
