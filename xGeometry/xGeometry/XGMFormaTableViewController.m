@@ -102,7 +102,11 @@
                         if([titulo isEqualToString:@"Volume"]){
                             imagePath = @"volume_icon.png";
                         }else{
-                            imagePath = @"altura_icon.png";
+                            if([titulo isEqualToString:@"Área - Equilátero"] || [titulo isEqualToString:@"Área - Isósceles"]){
+                                imagePath = @"area_icon.png";
+                            }else{
+                                imagePath = @"altura_icon.png";
+                            }
                         }
                     }
                 }
