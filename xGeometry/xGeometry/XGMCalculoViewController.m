@@ -290,6 +290,7 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;

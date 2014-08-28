@@ -19,7 +19,7 @@
     [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nAc = π . r²\n"]];
     [str appendString:[NSString stringWithFormat:@"Ac = π . %d²\n",self.raio]];
     [str appendString:[NSString stringWithFormat:@"Ac = π . %d\n",self.raio * self.raio]];
-    [str appendString:[NSString stringWithFormat:@"Ac = %f u²",self.raio * self.raio * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Ac = %.3f u²",self.raio * self.raio * 3.14]];
     
     return str;
 }
@@ -33,7 +33,7 @@
     [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nCc = 2 . π . r\n"]];
     [str appendString:[NSString stringWithFormat:@"Cc = 2 . π . %d\n",self.raio]];
     [str appendString:[NSString stringWithFormat:@"Cc = %d . π\n",2 * self.raio]];
-    [str appendString:[NSString stringWithFormat:@"Cc = %f u\n",2 * self.raio * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Cc = %.3f u\n",2 * self.raio * 3.14]];
     
     return str;
 }
