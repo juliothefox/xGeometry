@@ -21,6 +21,9 @@
 
 @interface XGMCalculoViewController : UIViewController
 
+@property (nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (nonatomic) IBOutlet UILabel *label;
+
 @property (nonatomic) NSInteger forma;
 @property (nonatomic) NSInteger propriedade;
 @property (nonatomic) NSString *resultado;

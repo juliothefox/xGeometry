@@ -8,7 +8,7 @@
 
 #import "XGMPrincipalTableViewController.h"
 #import "XGMFormaTableViewController.h"
-
+#import "XGMTutorialViewController.h"
 
 @interface XGMPrincipalTableViewController ()
 
@@ -33,16 +33,20 @@
     //Checa se é o primeiro uso
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenTutorial"] == NO){
         //Mostra o tutorial
-        UIAlertView *alert = [[UIAlertView alloc] init];
-        alert.title = @"First Use";
-        [alert addButtonWithTitle:@"OK"];
-        [alert show];
+        
+//        UIAlertView *alert = [[UIAlertView alloc] init];
+//        alert.title = @"First Use";
+//        [alert addButtonWithTitle:@"OK"];
+//        [alert show];
+//
+//        XGMTutorialViewController *view = [[XGMTutorialViewController alloc]init];
+//        [self presentViewController:view animated:YES completion:nil];        
         
         //Atualiza que o app já foi usado
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
-
+    
     self.clearsSelectionOnViewWillAppear = YES;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
@@ -74,15 +78,6 @@
     return self.arrayPlist.count;
 }
 
-//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    //Dá o título da seção da tableView
-//    switch (section) {
-//        default:
-//            return @"Formas geométricas";
-//            break;
-//    }
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -118,6 +113,5 @@
         view.forma = self.index;
     }
 }
-
 
 @end

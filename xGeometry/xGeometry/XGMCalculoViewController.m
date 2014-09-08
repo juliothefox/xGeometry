@@ -167,6 +167,8 @@
             break;
     }
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+    [self.view addSubview: self.segmentedControl];
+    [self.view addSubview: self.label];
 }
 
 -(UIView *)areaQuadrado
@@ -1121,6 +1123,46 @@
 {
     if([segue.identifier isEqualToString:@"resultado"]){
         XGMResultadoViewController *view = [segue destinationViewController];
+        
+        NSString *unidade = [[NSString alloc]init];
+        
+        switch (self.segmentedControl.selectedSegmentIndex) {
+            case 0:
+                unidade = @"km";
+                break;
+            
+            case 1:
+                unidade = @"hm";
+                break;
+            
+            case 2:
+                unidade = @"dam";
+                break;
+                
+            case 3:
+                unidade = @"m";
+                break;
+                
+            case 4:
+                unidade = @"dm";
+                break;
+                
+            case 5:
+                unidade = @"cm";
+                break;
+                
+            case 6:
+                unidade = @"mm";
+                break;
+                
+            default:
+                break;
+        }
+        
+        self.resultado = [self.resultado stringByReplacingOccurrencesOfString:@"u²" withString:[NSString stringWithFormat:@"%@²",unidade]];
+        
+        self.resultado = [self.resultado stringByReplacingOccurrencesOfString:@"u³" withString:[NSString stringWithFormat:@"%@³",unidade]];
+        
         view.resultado = self.resultado;
     }
 }

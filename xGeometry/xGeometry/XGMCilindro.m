@@ -50,7 +50,7 @@
     [str appendString:[NSString stringWithFormat:@"At = 2 . π . %d (%d + %d)\n",(int)_base.raio,(int)_base.raio,(int)_altura]];
     [str appendString:[NSString stringWithFormat:@"At = %d . π (%d)\n",(int) (2 * _base.raio), (int)(_base.raio + _altura)]];
     [str appendString:[NSString stringWithFormat:@"At = %d . π\n",(int) (2 * _base.raio * (_base.raio + _altura))]];
-    [str appendString:[NSString stringWithFormat:@"At = %.3f\n",6.28 * _base.raio * (_base.raio + _altura)]];
+    [str appendString:[NSString stringWithFormat:@"At = %.3f u²\n",6.28 * _base.raio * (_base.raio + _altura)]];
     
     return str;
 }

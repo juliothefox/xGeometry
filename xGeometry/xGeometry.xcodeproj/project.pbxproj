@@ -15,6 +15,8 @@
 		431E1C2D19A511E700DB1383 /* XGMCone.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2C19A511E700DB1383 /* XGMCone.m */; };
 		431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3119A53AF400DB1383 /* XGMCubo.m */; };
 		431E1C3619A5416200DB1383 /* XGMEsfera.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3519A5416200DB1383 /* XGMEsfera.m */; };
+		4328862319B8A4FB00DFDE10 /* XGMTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4328862119B8A4FB00DFDE10 /* XGMTutorialViewController.m */; };
+		4328862419B8A4FB00DFDE10 /* XGMTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4328862219B8A4FB00DFDE10 /* XGMTutorialViewController.xib */; };
 		432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */; };
 		43484C9F19AE4E4A0054A836 /* trianguloIsosceles_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */; };
 		43564D9419AD240B00FE9EBB /* icones.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43564D9319AD240B00FE9EBB /* icones.plist */; };
@@ -96,6 +98,9 @@
 		431E1C3119A53AF400DB1383 /* XGMCubo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCubo.m; sourceTree = "<group>"; };
 		431E1C3419A5416200DB1383 /* XGMEsfera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMEsfera.h; sourceTree = "<group>"; };
 		431E1C3519A5416200DB1383 /* XGMEsfera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMEsfera.m; sourceTree = "<group>"; };
+		4328862019B8A4FB00DFDE10 /* XGMTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMTutorialViewController.h; sourceTree = "<group>"; };
+		4328862119B8A4FB00DFDE10 /* XGMTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMTutorialViewController.m; sourceTree = "<group>"; };
+		4328862219B8A4FB00DFDE10 /* XGMTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XGMTutorialViewController.xib; sourceTree = "<group>"; };
 		432C4CCE199A90D900162D4D /* XGMFormaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMFormaTableViewController.h; sourceTree = "<group>"; };
 		432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMFormaTableViewController.m; sourceTree = "<group>"; };
 		43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trianguloIsosceles_icon.png; path = Icones/calculoViewController/trianguloIsosceles_icon.png; sourceTree = "<group>"; };
@@ -275,6 +280,17 @@
 			name = Esfera;
 			sourceTree = "<group>";
 		};
+		4328861F19B8A4B800DFDE10 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				4328862019B8A4FB00DFDE10 /* XGMTutorialViewController.h */,
+				4328862119B8A4FB00DFDE10 /* XGMTutorialViewController.m */,
+				4328862219B8A4FB00DFDE10 /* XGMTutorialViewController.xib */,
+			);
+			name = Tutorial;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		432C4CCD199A90C100162D4D /* FormaTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +446,7 @@
 		43CF0D5B199548AE00ECC2AC /* xGeometry */ = {
 			isa = PBXGroup;
 			children = (
+				4328861F19B8A4B800DFDE10 /* Tutorial */,
 				43564DAF19AD270800FE9EBB /* Icones */,
 				43CF0D9419955C9300ECC2AC /* Database */,
 				43CF0D8D19955AC800ECC2AC /* AppDelegate */,
@@ -593,6 +610,7 @@
 				43564DC219AD272300FE9EBB /* main_trapezio.png in Resources */,
 				43564DBC19AD272300FE9EBB /* main_circulo.png in Resources */,
 				43CF0D6C199548AE00ECC2AC /* Main_iPad.storyboard in Resources */,
+				4328862419B8A4FB00DFDE10 /* XGMTutorialViewController.xib in Resources */,
 				43564DBB19AD272300FE9EBB /* main_cilindro.png in Resources */,
 				43564DD319AD274300FE9EBB /* volume_icon.png in Resources */,
 				43564DE119AD275900FE9EBB /* circulo_icon.png in Resources */,
@@ -655,6 +673,7 @@
 				431E1C2D19A511E700DB1383 /* XGMCone.m in Sources */,
 				435B8B6619A65DCB00D2A3B7 /* XGMTroncoDeCone.m in Sources */,
 				43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */,
+				4328862319B8A4FB00DFDE10 /* XGMTutorialViewController.m in Sources */,
 				431E1C2919A50B0100DB1383 /* XGMCilindro.m in Sources */,
 				435B8B5E19A6513A00D2A3B7 /* XGMRetangulo.m in Sources */,
 				431E1C1919A4E3AA00DB1383 /* XGMQuadrado.m in Sources */,
