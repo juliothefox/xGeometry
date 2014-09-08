@@ -10,9 +10,9 @@
 
 @interface XGMTrapezio : NSObject
 
-@property (nonatomic) IBOutlet UITextField *baseMenorTF;
-@property (nonatomic) IBOutlet UITextField *baseMaiorTF;
-@property (nonatomic) IBOutlet UITextField *alturaTF;
+@property (nonatomic) UITextField *baseMenorTF;
+@property (nonatomic) UITextField *baseMaiorTF;
+@property (nonatomic) UITextField *alturaTF;
 
 @property (nonatomic) NSInteger baseMenor;
 @property (nonatomic) NSInteger baseMaior;

@@ -12,10 +12,13 @@
 @interface XGMCone : NSObject
 
 @property (nonatomic) XGMCirculo *base;
-@property (nonatomic) IBOutlet UITextField *geratrizTF;
+@property (nonatomic) UITextField *geratrizTF;
 @property (nonatomic) NSInteger geratriz;
-@property (nonatomic) IBOutlet UITextField *alturaTF;
+@property (nonatomic) UITextField *alturaTF;
 @property (nonatomic) NSInteger altura;
+
+@property (nonatomic) UITextField *piTF;
+@property (nonatomic) NSString *piStr;
 
 -(NSString *)calculaAreaLateral;
 -(NSString *)calculaAreaTotal;

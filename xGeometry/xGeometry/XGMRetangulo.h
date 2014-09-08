@@ -10,9 +10,9 @@
 
 @interface XGMRetangulo : NSObject
 
-@property (nonatomic) IBOutlet UITextField *baseTF;
+@property (nonatomic) UITextField *baseTF;
 @property (nonatomic) NSInteger base;
-@property (nonatomic) IBOutlet UITextField *alturaTF;
+@property (nonatomic) UITextField *alturaTF;
 @property (nonatomic) NSInteger altura;
 
 -(NSString *)calculaArea;

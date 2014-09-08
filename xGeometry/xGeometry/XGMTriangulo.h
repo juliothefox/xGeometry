@@ -10,8 +10,8 @@
 
 @interface XGMTriangulo : NSObject
 
-@property (nonatomic) IBOutlet UITextField *baseTF;
-@property (nonatomic) IBOutlet UITextField *ladoTF;
+@property (nonatomic) UITextField *baseTF;
+@property (nonatomic) UITextField *ladoTF;
 
 @property (nonatomic) NSInteger base;
 @property (nonatomic) NSInteger lado;

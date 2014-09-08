@@ -10,8 +10,11 @@
 
 @interface XGMEsfera : NSObject
 
-@property (nonatomic) IBOutlet UITextField *raioTF;
+@property (nonatomic) UITextField *raioTF;
 @property (nonatomic) NSInteger raio;
+
+@property (nonatomic) UITextField *piTF;
+@property (nonatomic) NSString *piStr;
 
 -(NSString *)calculaArea;
 -(NSString *)calculaVolume;

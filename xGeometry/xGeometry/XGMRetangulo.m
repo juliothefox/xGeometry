@@ -31,7 +31,7 @@
     
     [str appendString:[NSString stringWithFormat:@"Dr² = b² + h²\nDr² = %d² + %d²\n",_base,_altura]];
     [str appendString:[NSString stringWithFormat:@"Dr² = %d + %d\nDr² = %d\n",_base * _base,_altura * _altura,_base * _base + _altura * _altura]];
-    [str appendString:[NSString stringWithFormat:@"Dr = √%d\nDr = %f u",_base * _base + _altura * _altura,sqrtf(_base * _base + _altura * _altura)]];
+    [str appendString:[NSString stringWithFormat:@"Dr = √%d\nDr = %g u",_base * _base + _altura * _altura,sqrtf(_base * _base + _altura * _altura)]];
     
     return str;
 }

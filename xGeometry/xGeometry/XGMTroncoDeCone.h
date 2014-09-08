@@ -14,8 +14,11 @@
 @property (nonatomic) XGMCirculo *baseMaior;
 @property (nonatomic) XGMCirculo *baseMenor;
 
-@property (nonatomic) IBOutlet UITextField *geratrizTF;
+@property (nonatomic) UITextField *geratrizTF;
 @property (nonatomic) NSInteger geratriz;
+
+@property (nonatomic) UITextField *piTF;
+@property (nonatomic) NSString *piStr;
 
 -(NSString *)calculaArea;
 -(NSString *)calculaVolume;

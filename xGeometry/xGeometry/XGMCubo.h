@@ -10,7 +10,7 @@
 
 @interface XGMCubo : NSObject
 
-@property (nonatomic) IBOutlet UITextField *ladoTF;
+@property (nonatomic) UITextField *ladoTF;
 @property (nonatomic) NSInteger lado;
 
 -(NSString *)calculaAreaLateral;

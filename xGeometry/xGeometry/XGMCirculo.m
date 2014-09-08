@@ -14,12 +14,15 @@
 {
     self.raio = [self.raioTF.text integerValue];
     
+    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
+    float pi = [_piStr floatValue];
+    
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nAc = π . r²\n"]];
+    [str appendString:[NSString stringWithFormat:@"Considerando π como %g:\nAc = π . r²\n",pi]];
     [str appendString:[NSString stringWithFormat:@"Ac = π . %d²\n",self.raio]];
     [str appendString:[NSString stringWithFormat:@"Ac = π . %d\n",self.raio * self.raio]];
-    [str appendString:[NSString stringWithFormat:@"Ac = %.3f u²",self.raio * self.raio * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Ac = %g u²",self.raio * self.raio * pi]];
     
     return str;
 }
@@ -28,12 +31,15 @@
 {
     self.raio = [self.raioTF.text integerValue];
     
+    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
+    float pi = [_piStr floatValue];
+    
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nCc = 2 . π . r\n"]];
+    [str appendString:[NSString stringWithFormat:@"Considerando π como %g:\nCc = 2 . π . r\n",pi]];
     [str appendString:[NSString stringWithFormat:@"Cc = 2 . π . %d\n",self.raio]];
     [str appendString:[NSString stringWithFormat:@"Cc = %d . π\n",2 * self.raio]];
-    [str appendString:[NSString stringWithFormat:@"Cc = %.3f u\n",2 * self.raio * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Cc = %g u\n",2 * self.raio * pi]];
     
     return str;
 }

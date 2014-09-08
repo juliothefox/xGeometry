@@ -15,12 +15,15 @@
     self.base.raio = [self.base.raioTF.text integerValue];
     self.geratriz = [self.geratrizTF.text integerValue];
     
+    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
+    float pi = [_piStr floatValue];
+    
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nAl = π . r . g\n"]];
+    [str appendString:[NSString stringWithFormat:@"Considerando π como %g:\nAl = π . r . g\n",pi]];
     [str appendString:[NSString stringWithFormat:@"Al = π . %d . %d\n",self.base.raio,self.geratriz]];
     [str appendString:[NSString stringWithFormat:@"Al = %d . π\n",self.base.raio * self.geratriz]];
-    [str appendString:[NSString stringWithFormat:@"Al = %.3f u²",self.base.raio * self.geratriz * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Al = %g u²",self.base.raio * self.geratriz * pi]];
     
     return str;
 }
@@ -30,20 +33,23 @@
     self.base.raio = [self.base.raioTF.text integerValue];
     self.geratriz = [self.geratrizTF.text integerValue];
     
+    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
+    float pi = [_piStr floatValue];
+    
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nAl = π . r . g\n"]];
+    [str appendString:[NSString stringWithFormat:@"Considerando π como %g:\nAl = π . r . g\n",pi]];
     [str appendString:[NSString stringWithFormat:@"Al = π . %d . %d\n",self.base.raio,self.geratriz]];
     [str appendString:[NSString stringWithFormat:@"Al = %d . π\n",self.base.raio * self.geratriz]];
-    [str appendString:[NSString stringWithFormat:@"Al = %.3f u²\n\n",self.base.raio * self.geratriz * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Al = %g u²\n\n",self.base.raio * self.geratriz * pi]];
     
     [str appendString:[NSString stringWithFormat:@"Ab = π . r²\n"]];
     [str appendString:[NSString stringWithFormat:@"Ab = π . %d²\n",self.base.raio]];
     [str appendString:[NSString stringWithFormat:@"Ab = π . %d\n",self.base.raio * self.base.raio]];
-    [str appendString:[NSString stringWithFormat:@"Ab = %.3f u²\n\n",self.base.raio * self.base.raio * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"Ab = %g u²\n\n",self.base.raio * self.base.raio * pi]];
     
-    [str appendString:[NSString stringWithFormat:@"At = Al + Ab\nAt = %.3f + %.3f\n",self.base.raio * self.geratriz * 3.14,self.base.raio * self.base.raio * 3.14]];
-    [str appendString:[NSString stringWithFormat:@"At = %.3f u²",self.base.raio * self.geratriz * 3.14 + self.base.raio * self.base.raio * 3.14]];
+    [str appendString:[NSString stringWithFormat:@"At = Al + Ab\nAt = %g + %g\n",self.base.raio * self.geratriz * pi,self.base.raio * self.base.raio * pi]];
+    [str appendString:[NSString stringWithFormat:@"At = %g u²",self.base.raio * self.geratriz * pi + self.base.raio * self.base.raio * pi]];
     
     return str;
 }
@@ -53,13 +59,19 @@
     self.base.raio = [self.base.raioTF.text integerValue];
     self.altura = [self.alturaTF.text integerValue];
     
+    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
+    float pi = [_piStr floatValue];
+    
     NSMutableString *str = [[NSMutableString alloc]init];
     
-    [str appendString:[NSString stringWithFormat:@"Considerando π como 3,14:\nVc = 1/3 . π . r² . h\n"]];
+    [str appendString:[NSString stringWithFormat:@"Considerando π como %g:\nVc = 1/3 . π . r² . h\n",pi]];
     [str appendString:[NSString stringWithFormat:@"Vc = 1/3 . π . %d² . %d\n",self.base.raio,self.altura]];
     [str appendString:[NSString stringWithFormat:@"Vc = 1/3 . %d . π\n",self.base.raio * self.base.raio * self.altura]];
-    [str appendString:[NSString stringWithFormat:@"Vc = %.3f . π\n",(float)(self.base.raio * self.base.raio * self.altura)/3]];
-    [str appendString:[NSString stringWithFormat:@"Vc = %.3f u³",3.14 * ((self.base.raio * self.base.raio * self.altura)/3)]];
+    [str appendString:[NSString stringWithFormat:@"Vc = %g . π\n",(float)(self.base.raio * self.base.raio * self.altura)/3]];
+    
+    float resultado = pi * self.base.raio * self.base.raio * self.altura / 3;
+    
+    [str appendString:[NSString stringWithFormat:@"Vc = %g u³",resultado]];
     
     return str;
 }

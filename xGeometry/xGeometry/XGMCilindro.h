@@ -12,8 +12,11 @@
 @interface XGMCilindro : NSObject
 
 @property XGMCirculo *base;
-@property (nonatomic) IBOutlet UITextField *alturaTF;
-@property NSInteger altura;
+@property (nonatomic) UITextField *alturaTF;
+@property (nonatomic) NSInteger altura;
+
+@property (nonatomic) UITextField *piTF;
+@property (nonatomic) NSString *piStr;
 
 -(NSString *)calculaAreaLateral;
 -(NSString *)calculaAreaTotal;
