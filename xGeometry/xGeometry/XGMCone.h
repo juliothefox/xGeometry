@@ -18,7 +18,6 @@
 @property (nonatomic) NSInteger altura;
 
 @property (nonatomic) UITextField *piTF;
-@property (nonatomic) NSString *piStr;
 
 -(NSString *)calculaAreaLateral;
 -(NSString *)calculaAreaTotal;

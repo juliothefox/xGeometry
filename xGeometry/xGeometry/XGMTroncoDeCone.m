@@ -16,8 +16,7 @@
     self.baseMenor.raio = [self.baseMenor.raioTF.text integerValue];
     self.geratriz       = [self.geratrizTF.text integerValue];
     
-    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
-    float pi = [_piStr floatValue];
+    float pi = [_piTF.text floatValue];
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
@@ -35,8 +34,7 @@
     self.baseMenor.raio = [self.baseMenor.raioTF.text integerValue];
     self.geratriz       = [self.geratrizTF.text integerValue];
     
-    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
-    float pi = [_piStr floatValue];
+    float pi = [_piTF.text floatValue];
     
     float resultado = 0;
     

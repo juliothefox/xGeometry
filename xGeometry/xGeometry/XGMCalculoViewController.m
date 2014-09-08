@@ -17,6 +17,7 @@
 #define TRAPEZIO 7
 #define TRIANGULO 8
 #define TRONCO_DE_CONE 9
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
 
 @interface XGMCalculoViewController ()
 
@@ -45,6 +46,7 @@
     [super viewDidLoad];
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -169,6 +171,12 @@
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
     [self.view addSubview: self.segmentedControl];
     [self.view addSubview: self.label];
+
+    //Cria um frame de backup
+    _frame = self.view.frame;
+    //NavigationBar
+    _frame.origin.y += 64;
+    
 }
 
 -(UIView *)areaQuadrado
@@ -184,6 +192,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaQuadrado)];
     
@@ -211,6 +220,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaDiagonalQuadrado)];
     
@@ -237,15 +247,17 @@
     UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
-    raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.keyboardType = UIKeyboardTypeDecimalPad;
+    raioTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaCirculo)];
@@ -276,16 +288,18 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaCircunferenciaCirculo)];
@@ -316,22 +330,25 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
 
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCilindro)];
@@ -364,21 +381,24 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCilindro)];
@@ -411,21 +431,24 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeCilindro)];
@@ -458,21 +481,24 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
     geratrizTF.placeholder = @"Geratriz";
     geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
+    geratrizTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCone)];
@@ -505,21 +531,24 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UITextField *geratrizTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     geratrizTF.borderStyle = UITextBorderStyleRoundedRect;
     geratrizTF.placeholder = @"Geratriz";
     geratrizTF.keyboardType = UIKeyboardTypeNumberPad;
+    geratrizTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCone)];
@@ -552,20 +581,22 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UITextField *aluraTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     aluraTF.borderStyle = UITextBorderStyleRoundedRect;
     aluraTF.placeholder = @"Altura";
     aluraTF.keyboardType = UIKeyboardTypeNumberPad;
+    aluraTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     [view addSubview:piTF];
     
@@ -599,6 +630,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCubo)];
     
@@ -626,6 +658,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCubo)];
     
@@ -653,6 +686,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaDiagonalCubo)];
     
@@ -680,6 +714,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeCubo)];
     
@@ -707,16 +742,18 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaEsfera)];
@@ -746,16 +783,18 @@
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
     raioTF.keyboardType = UIKeyboardTypeNumberPad;
+    raioTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeEsfera)];
@@ -785,11 +824,13 @@
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaRetangulo)];
     
@@ -819,11 +860,13 @@
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaDiagonalRetangulo)];
     
@@ -853,16 +896,19 @@
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Base";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseMaiorTF.delegate = self;
     
     UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 10, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Base";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseMenorTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTrapezio)];
     
@@ -894,26 +940,30 @@
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Raio";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseMaiorTF.delegate = self;
     
     UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 10, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Raio";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseMenorTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Geratriz";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTroncoDeCone)];
@@ -949,26 +999,30 @@
     baseMaiorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMaiorTF.placeholder = @"Raio";
     baseMaiorTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseMaiorTF.delegate = self;
     
     UITextField *baseMenorTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 10, 80, 30)];
     baseMenorTF.borderStyle = UITextBorderStyleRoundedRect;
     baseMenorTF.placeholder = @"Raio";
     baseMenorTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseMenorTF.delegate = self;
     
     UITextField *alturaTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     alturaTF.borderStyle = UITextBorderStyleRoundedRect;
     alturaTF.placeholder = @"Altura";
     alturaTF.keyboardType = UIKeyboardTypeNumberPad;
+    alturaTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
-    valorPI.text = @"Valor de π = 3,14";
+    valorPI.text = @"Valor de π = ";
     
     [view addSubview:valorPI];
     
     UITextField *piTF = [[UITextField alloc]initWithFrame:CGRectMake(160, 266, 140, 30)];
     piTF.borderStyle = UITextBorderStyleRoundedRect;
-    piTF.placeholder = @"Valor de π";
+    piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeTroncoDeCone)];
@@ -1004,6 +1058,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAlturaTrianguloEquilatero)];
     
@@ -1031,6 +1086,7 @@
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTrianguloEquilatero)];
     
@@ -1058,11 +1114,13 @@
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseTF.delegate = self;
     
     UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAlturaTrianguloIsosceles)];
     
@@ -1092,11 +1150,13 @@
     baseTF.borderStyle = UITextBorderStyleRoundedRect;
     baseTF.placeholder = @"Base";
     baseTF.keyboardType = UIKeyboardTypeNumberPad;
+    baseTF.delegate = self;
     
     UITextField *ladoTF = [[UITextField alloc]initWithFrame:CGRectMake(230, 70, 80, 30)];
     ladoTF.borderStyle = UITextBorderStyleRoundedRect;
     ladoTF.placeholder = @"Lado";
     ladoTF.keyboardType = UIKeyboardTypeNumberPad;
+    ladoTF.delegate = self;
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTrianguloIsosceles)];
     
@@ -1311,6 +1371,36 @@
         
         view.resultado = self.resultado;
     }
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if (textField.frame.origin.y >= self.view.frame.size.height/3) {
+        CGRect frame = self.view.frame;
+        if(!IS_IPHONE5){
+            frame.origin.y = self.view.frame.origin.y - textField.frame.origin.y/2;
+        }else{
+            frame.origin.y = self.view.frame.origin.y - textField.frame.origin.y/6;
+        }
+        
+        [UIView beginAnimations: @"upView" context: nil];
+        [UIView setAnimationDelegate: self];
+        [UIView setAnimationDuration: 0.4];
+        [UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+        self.view.frame = frame;
+        [UIView commitAnimations];
+    }
+    
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [UIView beginAnimations: @"upView" context: nil];
+    [UIView setAnimationDelegate: self];
+    [UIView setAnimationDuration: 0.4];
+    [UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
+    self.view.frame = _frame;
+    [UIView commitAnimations];
 }
 
 @end

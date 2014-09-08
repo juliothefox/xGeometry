@@ -14,7 +14,6 @@
 @property (nonatomic) NSInteger raio;
 
 @property (nonatomic) UITextField *piTF;
-@property (nonatomic) NSString *piStr;
 
 -(NSString *)calculaArea;
 -(NSString *)calculaCircunferencia;

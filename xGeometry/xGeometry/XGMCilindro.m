@@ -15,8 +15,7 @@
     self.base.raio = [self.base.raioTF.text integerValue];
     self.altura = [self.alturaTF.text integerValue];
     
-    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
-    float pi = [_piStr floatValue];
+    float pi = [_piTF.text floatValue];
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
@@ -33,8 +32,7 @@
     self.base.raio = [self.base.raioTF.text integerValue];
     self.altura = [self.alturaTF.text integerValue];
     
-    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
-    float pi = [_piStr floatValue];
+    float pi = [_piTF.text floatValue];
     
     NSMutableString *str = [[NSMutableString alloc]init];
     
@@ -66,8 +64,7 @@
     self.base.raio = [self.base.raioTF.text integerValue];
     self.altura = [self.alturaTF.text integerValue];
     
-    self.piStr = [NSString stringWithFormat:@"3.14%f",[_piTF.text floatValue]];
-    float pi = [_piStr floatValue];
+    float pi = [_piTF.text floatValue];
     
     NSMutableString *str = [[NSMutableString alloc]init];
     

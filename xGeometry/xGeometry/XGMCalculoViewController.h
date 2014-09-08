@@ -19,7 +19,9 @@
 #import "XGMTrapezio.h"
 #import "XGMTroncoDeCone.h"
 
-@interface XGMCalculoViewController : UIViewController
+@interface XGMCalculoViewController : UIViewController <UITextFieldDelegate>
+
+@property CGRect frame;
 
 @property (nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (nonatomic) IBOutlet UILabel *label;

@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     self.sobreTV.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
-    self.sobre = @"xGeometry\n\nVersão 1.0\nCriado por Júlio César Menezes Noronha\nTodos os direitos reservados.";
+    self.sobre = @"xGeometry\n\nVersão 1.0\nCriado por Júlio César Menezes Noronha\nTodos os direitos reservados.\n\nNão delete esse aplicativo, em breve haverá atualizações! E não o use para colar nas provas de matemática =)!";
     
     NSNotificationCenter *notification = [NSNotificationCenter defaultCenter];
     [notification addObserver:self selector:@selector(updateFont) name:UIContentSizeCategoryDidChangeNotification object:nil];

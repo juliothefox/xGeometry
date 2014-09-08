@@ -37,10 +37,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="xGeometry" id="XKF-6j-SPy">
-                        <barButtonItem key="rightBarButtonItem" title="Sobre" id="NNC-wE-0UJ">
+                        <barButtonItem key="rightBarButtonItem" title="Sobre" id="RGz-kW-VgA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="7HG-hY-qgL" kind="push" identifier="sobre" id="K5R-eR-foB"/>
+                                <segue destination="7HG-hY-qgL" kind="push" id="PFI-Ea-Reg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
