@@ -114,4 +114,16 @@
     }
 }
 
+-(IBAction)sobre:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"xGeometry" message:@"Versão 1.0\nCriado por:\nJúlio César Menezes Noronha\n\nTodos os direitos reservados.\n\nNão delete esse aplicativo, em breve haverá atualizações!\nE não o use para colar nas provas de matemática =)" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
+-(IBAction)tutorial:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Tutorial" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
 @end

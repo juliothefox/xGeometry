@@ -25,6 +25,7 @@
 
 @property (nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (nonatomic) IBOutlet UILabel *label;
+@property (nonatomic) IBOutlet UITextField *piTF;
 
 @property (nonatomic) NSInteger forma;
 @property (nonatomic) NSInteger propriedade;

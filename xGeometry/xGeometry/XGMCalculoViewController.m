@@ -247,7 +247,7 @@
     UITextField *raioTF = [[UITextField alloc]initWithFrame:CGRectMake(120, 150, 80, 30)];
     raioTF.borderStyle = UITextBorderStyleRoundedRect;
     raioTF.placeholder = @"Raio";
-    raioTF.keyboardType = UIKeyboardTypeDecimalPad;
+    raioTF.keyboardType = UIKeyboardTypeNumberPad;
     raioTF.delegate = self;
     
     UILabel *valorPI = [[UILabel alloc]initWithFrame:CGRectMake(20, 270, 131, 21)];
@@ -258,6 +258,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaCirculo)];
@@ -300,6 +301,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaCircunferenciaCirculo)];
@@ -349,6 +351,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCilindro)];
@@ -399,6 +402,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCilindro)];
@@ -449,6 +453,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeCilindro)];
@@ -499,6 +504,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaLateralCone)];
@@ -549,6 +555,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTotalCone)];
@@ -598,6 +605,8 @@
     piTF.borderStyle = UITextBorderStyleRoundedRect;
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
+    piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeCone)];
@@ -754,6 +763,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaEsfera)];
@@ -795,6 +805,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeEsfera)];
@@ -964,6 +975,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaAreaTroncoDeCone)];
@@ -1023,6 +1035,7 @@
     piTF.text = @"3.14";
     piTF.keyboardType = UIKeyboardTypeNumberPad;
     piTF.delegate = self;
+    _piTF = piTF;
     [view addSubview:piTF];
     
     UIBarButtonItem *calcularBtn = [[UIBarButtonItem alloc]initWithTitle:@"Calcular" style:UIBarButtonItemStylePlain target:self action:@selector(calculaVolumeTroncoDeCone)];
@@ -1401,6 +1414,17 @@
     [UIView setAnimationCurve: UIViewAnimationCurveEaseInOut];
     self.view.frame = _frame;
     [UIView commitAnimations];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(textField == _piTF){
+        NSUInteger newLength = [textField.text length] + [string length] - range.length;
+        return (newLength < 4 || newLength > 7) ? NO : YES;
+    }
+    
+    NSUInteger newLength = [textField.text length] + [string length] - range.length;
+    return (newLength > 6) ? NO : YES;
 }
 
 @end

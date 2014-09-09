@@ -37,10 +37,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="xGeometry" id="XKF-6j-SPy">
+                        <barButtonItem key="leftBarButtonItem" title="Tutorial" id="tna-BW-uSW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="tutorial:" destination="x70-cv-i8F" id="Ufp-nN-XgY"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Sobre" id="RGz-kW-VgA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="7HG-hY-qgL" kind="push" id="PFI-Ea-Reg"/>
+                                <action selector="sobre:" destination="x70-cv-i8F" id="pYb-ZS-7pt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -152,35 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1Q-0Q-CYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953" y="27"/>
-        </scene>
-        <!--Sobre View Controller - Sobre-->
-        <scene sceneID="QlD-xp-eAo">
-            <objects>
-                <viewController id="7HG-hY-qgL" customClass="XGMSobreViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kZR-oH-m4u">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="guU-1R-d4k">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="631"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sobre" id="TMn-5f-UhW"/>
-                    <connections>
-                        <outlet property="sobreTV" destination="guU-1R-d4k" id="O60-1v-rr5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xF-CN-v2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="117" y="-647"/>
+            <point key="canvasLocation" x="117" y="729"/>
         </scene>
         <!--Explicacao View Controller - Explicação-->
         <scene sceneID="Adx-Lo-KjR">
@@ -208,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="krn-PA-459" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="-647"/>
+            <point key="canvasLocation" x="-295" y="729"/>
         </scene>
         <!--Resultado View Controller-->
         <scene sceneID="fb9-6u-K7U">
@@ -236,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9t-zf-hM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="27"/>
+            <point key="canvasLocation" x="540" y="729"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bJQ-8o-qI4">

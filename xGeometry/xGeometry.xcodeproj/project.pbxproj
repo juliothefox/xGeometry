@@ -48,7 +48,6 @@
 		43564DE819AD275900FE9EBB /* trianguloEquilatero_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDD19AD275900FE9EBB /* trianguloEquilatero_icon.png */; };
 		43564DEA19AD275900FE9EBB /* troncoDeCone_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43564DDF19AD275900FE9EBB /* troncoDeCone_icon.png */; };
 		43597F9919AB74EC00E0052D /* XGMExplicacaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43597F9819AB74EC00E0052D /* XGMExplicacaoViewController.m */; };
-		43597F9C19AB74FB00E0052D /* XGMSobreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43597F9B19AB74FB00E0052D /* XGMSobreViewController.m */; };
 		435B8B5E19A6513A00D2A3B7 /* XGMRetangulo.m in Sources */ = {isa = PBXBuildFile; fileRef = 435B8B5D19A6513A00D2A3B7 /* XGMRetangulo.m */; };
 		435B8B6219A6561500D2A3B7 /* XGMTrapezio.m in Sources */ = {isa = PBXBuildFile; fileRef = 435B8B6119A6561500D2A3B7 /* XGMTrapezio.m */; };
 		435B8B6619A65DCB00D2A3B7 /* XGMTroncoDeCone.m in Sources */ = {isa = PBXBuildFile; fileRef = 435B8B6519A65DCB00D2A3B7 /* XGMTroncoDeCone.m */; };
@@ -134,8 +133,6 @@
 		43564DDF19AD275900FE9EBB /* troncoDeCone_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = troncoDeCone_icon.png; path = Icones/calculoViewController/troncoDeCone_icon.png; sourceTree = "<group>"; };
 		43597F9719AB74EC00E0052D /* XGMExplicacaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMExplicacaoViewController.h; sourceTree = "<group>"; };
 		43597F9819AB74EC00E0052D /* XGMExplicacaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMExplicacaoViewController.m; sourceTree = "<group>"; };
-		43597F9A19AB74FB00E0052D /* XGMSobreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMSobreViewController.h; sourceTree = "<group>"; };
-		43597F9B19AB74FB00E0052D /* XGMSobreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMSobreViewController.m; sourceTree = "<group>"; };
 		435B8B5C19A6513A00D2A3B7 /* XGMRetangulo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMRetangulo.h; sourceTree = "<group>"; };
 		435B8B5D19A6513A00D2A3B7 /* XGMRetangulo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMRetangulo.m; sourceTree = "<group>"; };
 		435B8B6019A6561500D2A3B7 /* XGMTrapezio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMTrapezio.h; sourceTree = "<group>"; };
@@ -377,15 +374,6 @@
 			name = ExplicacaoViewController;
 			sourceTree = "<group>";
 		};
-		43597F9619AB74D100E0052D /* SobreViewController */ = {
-			isa = PBXGroup;
-			children = (
-				43597F9A19AB74FB00E0052D /* XGMSobreViewController.h */,
-				43597F9B19AB74FB00E0052D /* XGMSobreViewController.m */,
-			);
-			name = SobreViewController;
-			sourceTree = "<group>";
-		};
 		435B8B5B19A6512500D2A3B7 /* Retangulo */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,7 +444,6 @@
 				432C4CD1199A9BD600162D4D /* CalculoViewController */,
 				431E1C1A19A4E74B00DB1383 /* ResultadoViewController */,
 				43597F9519AB74BB00E0052D /* ExplicacaoViewController */,
-				43597F9619AB74D100E0052D /* SobreViewController */,
 				431E1C2F19A53AD900DB1383 /* Formas */,
 				43CF0D70199548AE00ECC2AC /* Images.xcassets */,
 				43CF0D5C199548AE00ECC2AC /* Supporting Files */,
@@ -677,7 +664,6 @@
 				431E1C2919A50B0100DB1383 /* XGMCilindro.m in Sources */,
 				435B8B5E19A6513A00D2A3B7 /* XGMRetangulo.m in Sources */,
 				431E1C1919A4E3AA00DB1383 /* XGMQuadrado.m in Sources */,
-				43597F9C19AB74FB00E0052D /* XGMSobreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,9 +798,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xGeometry/xGeometry-Prefix.pch";
 				INFOPLIST_FILE = "xGeometry/xGeometry-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -826,9 +814,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "xGeometry/xGeometry-Prefix.pch";
 				INFOPLIST_FILE = "xGeometry/xGeometry-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
