@@ -15,8 +15,6 @@
 		431E1C2D19A511E700DB1383 /* XGMCone.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C2C19A511E700DB1383 /* XGMCone.m */; };
 		431E1C3219A53AF400DB1383 /* XGMCubo.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3119A53AF400DB1383 /* XGMCubo.m */; };
 		431E1C3619A5416200DB1383 /* XGMEsfera.m in Sources */ = {isa = PBXBuildFile; fileRef = 431E1C3519A5416200DB1383 /* XGMEsfera.m */; };
-		4328862319B8A4FB00DFDE10 /* XGMTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4328862119B8A4FB00DFDE10 /* XGMTutorialViewController.m */; };
-		4328862419B8A4FB00DFDE10 /* XGMTutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4328862219B8A4FB00DFDE10 /* XGMTutorialViewController.xib */; };
 		432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */; };
 		43484C9F19AE4E4A0054A836 /* trianguloIsosceles_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */; };
 		43564D9419AD240B00FE9EBB /* icones.plist in Resources */ = {isa = PBXBuildFile; fileRef = 43564D9319AD240B00FE9EBB /* icones.plist */; };
@@ -51,6 +49,15 @@
 		435B8B5E19A6513A00D2A3B7 /* XGMRetangulo.m in Sources */ = {isa = PBXBuildFile; fileRef = 435B8B5D19A6513A00D2A3B7 /* XGMRetangulo.m */; };
 		435B8B6219A6561500D2A3B7 /* XGMTrapezio.m in Sources */ = {isa = PBXBuildFile; fileRef = 435B8B6119A6561500D2A3B7 /* XGMTrapezio.m */; };
 		435B8B6619A65DCB00D2A3B7 /* XGMTroncoDeCone.m in Sources */ = {isa = PBXBuildFile; fileRef = 435B8B6519A65DCB00D2A3B7 /* XGMTroncoDeCone.m */; };
+		43A4D61819C090CA007EC2CA /* XGMTutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A4D61719C090CA007EC2CA /* XGMTutorialViewController.m */; };
+		43A4D61D19C09970007EC2CA /* Calculo.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D61919C09970007EC2CA /* Calculo.png */; };
+		43A4D61E19C09970007EC2CA /* Propriedade.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D61A19C09970007EC2CA /* Propriedade.png */; };
+		43A4D61F19C09970007EC2CA /* Resultado.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D61B19C09970007EC2CA /* Resultado.png */; };
+		43A4D62019C09970007EC2CA /* Tela Principal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D61C19C09970007EC2CA /* Tela Principal.png */; };
+		43A4D62519C0AC30007EC2CA /* Calculo 3,5.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D62119C0AC30007EC2CA /* Calculo 3,5.png */; };
+		43A4D62619C0AC30007EC2CA /* Propriedade 3,5.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D62219C0AC30007EC2CA /* Propriedade 3,5.png */; };
+		43A4D62719C0AC30007EC2CA /* Resultado 3,5.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D62319C0AC30007EC2CA /* Resultado 3,5.png */; };
+		43A4D62819C0AC30007EC2CA /* Tela Principal 3,5.png in Resources */ = {isa = PBXBuildFile; fileRef = 43A4D62419C0AC30007EC2CA /* Tela Principal 3,5.png */; };
 		43C4E58519A29991009BE472 /* XGMCalculoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C4E58419A29991009BE472 /* XGMCalculoViewController.m */; };
 		43CF0D56199548AE00ECC2AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D55199548AE00ECC2AC /* Foundation.framework */; };
 		43CF0D58199548AE00ECC2AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CF0D57199548AE00ECC2AC /* CoreGraphics.framework */; };
@@ -97,9 +104,6 @@
 		431E1C3119A53AF400DB1383 /* XGMCubo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCubo.m; sourceTree = "<group>"; };
 		431E1C3419A5416200DB1383 /* XGMEsfera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMEsfera.h; sourceTree = "<group>"; };
 		431E1C3519A5416200DB1383 /* XGMEsfera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMEsfera.m; sourceTree = "<group>"; };
-		4328862019B8A4FB00DFDE10 /* XGMTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMTutorialViewController.h; sourceTree = "<group>"; };
-		4328862119B8A4FB00DFDE10 /* XGMTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMTutorialViewController.m; sourceTree = "<group>"; };
-		4328862219B8A4FB00DFDE10 /* XGMTutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XGMTutorialViewController.xib; sourceTree = "<group>"; };
 		432C4CCE199A90D900162D4D /* XGMFormaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMFormaTableViewController.h; sourceTree = "<group>"; };
 		432C4CCF199A90D900162D4D /* XGMFormaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMFormaTableViewController.m; sourceTree = "<group>"; };
 		43484C9E19AE4E4A0054A836 /* trianguloIsosceles_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trianguloIsosceles_icon.png; path = Icones/calculoViewController/trianguloIsosceles_icon.png; sourceTree = "<group>"; };
@@ -139,6 +143,16 @@
 		435B8B6119A6561500D2A3B7 /* XGMTrapezio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMTrapezio.m; sourceTree = "<group>"; };
 		435B8B6419A65DCB00D2A3B7 /* XGMTroncoDeCone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMTroncoDeCone.h; sourceTree = "<group>"; };
 		435B8B6519A65DCB00D2A3B7 /* XGMTroncoDeCone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMTroncoDeCone.m; sourceTree = "<group>"; };
+		43A4D61619C090CA007EC2CA /* XGMTutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMTutorialViewController.h; sourceTree = "<group>"; };
+		43A4D61719C090CA007EC2CA /* XGMTutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMTutorialViewController.m; sourceTree = "<group>"; };
+		43A4D61919C09970007EC2CA /* Calculo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calculo.png; sourceTree = "<group>"; };
+		43A4D61A19C09970007EC2CA /* Propriedade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Propriedade.png; sourceTree = "<group>"; };
+		43A4D61B19C09970007EC2CA /* Resultado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Resultado.png; sourceTree = "<group>"; };
+		43A4D61C19C09970007EC2CA /* Tela Principal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tela Principal.png"; sourceTree = "<group>"; };
+		43A4D62119C0AC30007EC2CA /* Calculo 3,5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calculo 3,5.png"; sourceTree = "<group>"; };
+		43A4D62219C0AC30007EC2CA /* Propriedade 3,5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Propriedade 3,5.png"; sourceTree = "<group>"; };
+		43A4D62319C0AC30007EC2CA /* Resultado 3,5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resultado 3,5.png"; sourceTree = "<group>"; };
+		43A4D62419C0AC30007EC2CA /* Tela Principal 3,5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tela Principal 3,5.png"; sourceTree = "<group>"; };
 		43C4E58319A29991009BE472 /* XGMCalculoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGMCalculoViewController.h; sourceTree = "<group>"; };
 		43C4E58419A29991009BE472 /* XGMCalculoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGMCalculoViewController.m; sourceTree = "<group>"; };
 		43CF0D52199548AE00ECC2AC /* xGeometry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xGeometry.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,9 +294,16 @@
 		4328861F19B8A4B800DFDE10 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				4328862019B8A4FB00DFDE10 /* XGMTutorialViewController.h */,
-				4328862119B8A4FB00DFDE10 /* XGMTutorialViewController.m */,
-				4328862219B8A4FB00DFDE10 /* XGMTutorialViewController.xib */,
+				43A4D62119C0AC30007EC2CA /* Calculo 3,5.png */,
+				43A4D62219C0AC30007EC2CA /* Propriedade 3,5.png */,
+				43A4D62319C0AC30007EC2CA /* Resultado 3,5.png */,
+				43A4D62419C0AC30007EC2CA /* Tela Principal 3,5.png */,
+				43A4D61919C09970007EC2CA /* Calculo.png */,
+				43A4D61A19C09970007EC2CA /* Propriedade.png */,
+				43A4D61B19C09970007EC2CA /* Resultado.png */,
+				43A4D61C19C09970007EC2CA /* Tela Principal.png */,
+				43A4D61619C090CA007EC2CA /* XGMTutorialViewController.h */,
+				43A4D61719C090CA007EC2CA /* XGMTutorialViewController.m */,
 			);
 			name = Tutorial;
 			path = ..;
@@ -434,11 +455,11 @@
 		43CF0D5B199548AE00ECC2AC /* xGeometry */ = {
 			isa = PBXGroup;
 			children = (
-				4328861F19B8A4B800DFDE10 /* Tutorial */,
 				43564DAF19AD270800FE9EBB /* Icones */,
 				43CF0D9419955C9300ECC2AC /* Database */,
 				43CF0D8D19955AC800ECC2AC /* AppDelegate */,
 				43CF0D8E19955AD100ECC2AC /* Storyboard */,
+				4328861F19B8A4B800DFDE10 /* Tutorial */,
 				43CF0D9019955B6B00ECC2AC /* PrincipalTableViewController */,
 				432C4CCD199A90C100162D4D /* FormaTableViewController */,
 				432C4CD1199A9BD600162D4D /* CalculoViewController */,
@@ -594,10 +615,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				43564DE619AD275900FE9EBB /* retangulo_icon.png in Resources */,
+				43A4D62519C0AC30007EC2CA /* Calculo 3,5.png in Resources */,
+				43A4D61D19C09970007EC2CA /* Calculo.png in Resources */,
 				43564DC219AD272300FE9EBB /* main_trapezio.png in Resources */,
 				43564DBC19AD272300FE9EBB /* main_circulo.png in Resources */,
 				43CF0D6C199548AE00ECC2AC /* Main_iPad.storyboard in Resources */,
-				4328862419B8A4FB00DFDE10 /* XGMTutorialViewController.xib in Resources */,
 				43564DBB19AD272300FE9EBB /* main_cilindro.png in Resources */,
 				43564DD319AD274300FE9EBB /* volume_icon.png in Resources */,
 				43564DE119AD275900FE9EBB /* circulo_icon.png in Resources */,
@@ -605,12 +627,15 @@
 				43CF0D71199548AE00ECC2AC /* Images.xcassets in Resources */,
 				43564DD219AD274300FE9EBB /* diagonal_icon.png in Resources */,
 				43564DCE19AD274300FE9EBB /* area_icon.png in Resources */,
+				43A4D61F19C09970007EC2CA /* Resultado.png in Resources */,
 				43564DE519AD275900FE9EBB /* quadrado_icon.png in Resources */,
+				43A4D62719C0AC30007EC2CA /* Resultado 3,5.png in Resources */,
 				43CF0D69199548AE00ECC2AC /* Main_iPhone.storyboard in Resources */,
 				43564DCF19AD274300FE9EBB /* areaLateral_icon.png in Resources */,
 				43564DBE19AD272300FE9EBB /* main_cubo.png in Resources */,
 				43CF0D9619955CB500ECC2AC /* principalTableView.plist in Resources */,
 				43564DBD19AD272300FE9EBB /* main_cone.png in Resources */,
+				43A4D62819C0AC30007EC2CA /* Tela Principal 3,5.png in Resources */,
 				43564D9419AD240B00FE9EBB /* icones.plist in Resources */,
 				43564DE219AD275900FE9EBB /* cone_icon.png in Resources */,
 				43564DC019AD272300FE9EBB /* main_quadrado.png in Resources */,
@@ -624,8 +649,11 @@
 				43564DBF19AD272300FE9EBB /* main_esfera.png in Resources */,
 				43564DC319AD272300FE9EBB /* main_triangulo.png in Resources */,
 				43564DC419AD272300FE9EBB /* main_troncoDeCone.png in Resources */,
+				43A4D62619C0AC30007EC2CA /* Propriedade 3,5.png in Resources */,
 				43564DD019AD274300FE9EBB /* areaTotal_icon.png in Resources */,
+				43A4D62019C09970007EC2CA /* Tela Principal.png in Resources */,
 				43484C9F19AE4E4A0054A836 /* trianguloIsosceles_icon.png in Resources */,
+				43A4D61E19C09970007EC2CA /* Propriedade.png in Resources */,
 				43564DCD19AD274300FE9EBB /* altura_icon.png in Resources */,
 				43564DEA19AD275900FE9EBB /* troncoDeCone_icon.png in Resources */,
 			);
@@ -651,6 +679,7 @@
 				431E1C3619A5416200DB1383 /* XGMEsfera.m in Sources */,
 				43597F9919AB74EC00E0052D /* XGMExplicacaoViewController.m in Sources */,
 				431E1C1D19A4E76400DB1383 /* XGMResultadoViewController.m in Sources */,
+				43A4D61819C090CA007EC2CA /* XGMTutorialViewController.m in Sources */,
 				435B8B6219A6561500D2A3B7 /* XGMTrapezio.m in Sources */,
 				432C4CD0199A90D900162D4D /* XGMFormaTableViewController.m in Sources */,
 				431E1C2119A4FF7000DB1383 /* XGMTriangulo.m in Sources */,
@@ -660,7 +689,6 @@
 				431E1C2D19A511E700DB1383 /* XGMCone.m in Sources */,
 				435B8B6619A65DCB00D2A3B7 /* XGMTroncoDeCone.m in Sources */,
 				43CF0D9319955B9100ECC2AC /* XGMPrincipalTableViewController.m in Sources */,
-				4328862319B8A4FB00DFDE10 /* XGMTutorialViewController.m in Sources */,
 				431E1C2919A50B0100DB1383 /* XGMCilindro.m in Sources */,
 				435B8B5E19A6513A00D2A3B7 /* XGMRetangulo.m in Sources */,
 				431E1C1919A4E3AA00DB1383 /* XGMQuadrado.m in Sources */,

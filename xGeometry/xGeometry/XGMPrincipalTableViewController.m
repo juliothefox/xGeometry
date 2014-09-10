@@ -33,14 +33,7 @@
     //Checa se é o primeiro uso
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"hasSeenTutorial"] == NO){
         //Mostra o tutorial
-        
-//        UIAlertView *alert = [[UIAlertView alloc] init];
-//        alert.title = @"First Use";
-//        [alert addButtonWithTitle:@"OK"];
-//        [alert show];
-//
-//        XGMTutorialViewController *view = [[XGMTutorialViewController alloc]init];
-//        [self presentViewController:view animated:YES completion:nil];        
+        [self performSegueWithIdentifier:@"tutorial" sender:self];
         
         //Atualiza que o app já foi usado
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasSeenTutorial"];
